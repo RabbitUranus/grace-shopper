@@ -1,0 +1,157 @@
+{
+  "items": [
+    {
+      "name": "A watch",
+      "category": "watch",
+      "price": 1,
+      "description": "Cool watch",
+      "image": "public/images/watches/watch-1245791_1280.jpg",
+      "color": "gold"
+    },
+    {
+      "name": "The best watch",
+      "category": "watch",
+      "price": 10,
+      "description": "Cool watch",
+      "image": "public/images/watches/wristwatch-1149669_1280.jpg",
+      "color": "silver"
+    },
+    {
+      "name": "A beautiful watch",
+      "category": "watch",
+      "price": 500,
+      "description": "Cool watch",
+      "image": "public/images/watches/wrist-watch-2159351_1280.jpg",
+      "color": "gold"
+    },
+    {
+      "name": "An expensive watch",
+      "category": "watch",
+      "price": 1000000.99,
+      "description": "Cool watch",
+      "image": "public/images/watches/wrist-2254969_1280.jpg",
+      "color": "gold"
+    },
+    {
+      "name": "A very cheap watch",
+      "category": "watch",
+      "price": 0.01,
+      "description": "Not a good watch, don't buy it",
+      "image": "public/images/watches/time-425818_1280.jpg",
+      "color": "gold"
+    },
+    {
+      "name": "Analog watch",
+      "category": "watch",
+      "price": 155,
+      "description": "Cool watch",
+      "image": "public/images/watches/analog-watch-1869928_1280.jpg",
+      "color": "silver"
+    },
+    {
+      "name": "An uninteresting watch",
+      "category": "watch",
+      "price": 99.99,
+      "description": "Cool watch",
+      "image": "public/images/watches/clock-623170_1280.jpg",
+      "color": "gold"
+    },
+    {
+      "name": "Your newest watch",
+      "category": "watch",
+      "price": 160,
+      "description": "Cool watch",
+      "image": "public/images/watches/smart-watch-821557_1280.jpg",
+      "color": "gold"
+    },
+    {
+      "name": "The URL for this watch says it is a person",
+      "category": "watch",
+      "price": 1,
+      "description": "I dont have the image open, is it really a person?",
+      "image": "public/images/watches/people-2582815_1280.jpg",
+      "color": "gold"
+    },
+    {
+      "name": "A smart watch",
+      "category": "watch",
+      "price": 100,
+      "description": "Cool watch",
+      "image": "public/images/watches/smart-watch-821559_1280.jpg",
+      "color": "gold"
+    },
+
+    {
+      "name": "A ring",
+      "category": "ring",
+      "price": 100,
+      "description": "Cool ring",
+      "image": "public/images/rings/1.jpg",
+      "color": "gold"
+    },
+    {
+      "name": "Another ring",
+      "category": "ring",
+      "price": 100,
+      "description": "Cool ring",
+      "image": "public/images/rings/2.jpg",
+      "color": "gold"
+    },
+    {
+      "name": "An interesting ring",
+      "category": "ring",
+      "price": 100,
+      "description": "Cool ring",
+      "image": "public/images/rings/amber-669479_1280.jpg",
+      "color": "gold"
+    },
+    {
+      "name": "A magic ring",
+      "category": "ring",
+      "price": 100,
+      "description": "Cool ring",
+      "image": "public/images/rings/diamond-553492_1280.png",
+      "color": "gold"
+    },
+    {
+      "name": "An engagement ring",
+      "category": "ring",
+      "price": 100,
+      "description": "Cool ring",
+      "image": "public/images/rings/engagement-ring-2093824_1280.jpg",
+      "color": "gold"
+    },
+    {
+      "name": "Some Earrings",
+      "category": "earrings",
+      "price": 150,
+      "description": "Cool earring",
+      "image": "public/images/earrings/accessories-2684884_1280.jpg",
+      "color": "silver"
+    },
+    {
+      "name": "Rose Gold Earrings",
+      "category": "earrings",
+      "price": 100,
+      "description": "Cool earring",
+      "image": "public/images/earrings/rose-gold-1875469_1280.jpg",
+      "color": "red"
+    },
+    {
+      "name": "Topaz Earrings",
+      "category": "earrings",
+      "price": 100,
+      "description": "Cool earring",
+      "image": "public/images/earrings/topaz-665340_1280.jpg",
+      "color": "gold"
+    },
+    {
+      "name": "Wolf Earrings",
+      "category": "earrings",
+      "price": 1000,
+      "description": "Cool earring",
+      "image": "public/images/earrings/wolf-331722_1280.jpg",
+      "color": "black"
+    }
+  ]
+}
