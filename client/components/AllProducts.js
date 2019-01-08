@@ -4,10 +4,17 @@ import {fetchProducts} from '../reducers/products';
 
 import SingleProduct from './SingleProduct';
 
+const dummyData = {
+  name: 'watch',
+  description: 'nice watch',
+  price: 50,
+  image: 'abc'
+};
+
 export class AllProducts extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   componentDidMount() {
     // this.props.fetchProducts();
@@ -17,6 +24,7 @@ export class AllProducts extends Component {
     return (
       <div>
         <h1>All Products</h1>
+        <SingleProduct product={dummyData} />
         {/* {products.map(product => <SingleProduct product={product} />)} */}
       </div>
     );
