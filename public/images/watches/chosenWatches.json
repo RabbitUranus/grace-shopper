@@ -1,14 +1,13 @@
 {
-  "totalHits": 131,
-  "hits": [
+  "watches": [
     {
-      "id": 2031021,
       "pageURL": "https://pixabay.com/en/pocket-watch-clock-time-old-2031021/",
-      "imgURI": "pocket-watch-2031021_1280.jpg",
-      "type": "photo",
-      "tags": "pocket watch, clock, time",
+      "image": "pocket-watch-2031021_1280.jpg",
       "price": null,
-      "category": ["watch, pocket-watch"]
+      "color": null,
+      "name": "",
+      "category": "watch",
+      "description": "lorem ipsum"
     },
     {
       "id": 410328,
