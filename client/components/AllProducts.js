@@ -6,15 +6,14 @@ import SingleProduct from './SingleProduct';
 
 import axios from 'axios';
 
-const dummyData = {
-  name: 'watch',
-  description: 'nice watch',
-  price: 50,
-  image: 'abc'
-};
+// const dummyData = {
+//   name: 'watch',
+//   description: 'nice watch',
+//   price: 50,
+//   image: 'abc'
+// };
 
 export class AllProducts extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -27,6 +26,7 @@ export class AllProducts extends Component {
     this.setState({
       products: data
     });
+    console.log(this.props, '*****');
     // console.log('componentDidMount', this.state.products);
     // this.render();
     // console.log(fetchProducts);
@@ -41,7 +41,7 @@ export class AllProducts extends Component {
         <h1>All Products</h1>
         {/* <SingleProduct product={dummyData} /> */}
         {this.state.products ? (
-          this.state.products.map(product => (
+          products.map(product => (
             <SingleProduct product={product} key={product.id} />
           ))
         ) : (
