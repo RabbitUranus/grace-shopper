@@ -11,10 +11,7 @@ const User = db.define('user', {
     }
   },
   phone: {
-    type: Sequelize.INTEGER,
-    validate: {
-      len: 10
-    }
+    type: Sequelize.BIGINT
   },
   address: {
     type: Sequelize.STRING

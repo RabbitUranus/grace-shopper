@@ -39,7 +39,8 @@ const Item = db.define('item', {
       'red',
       'orange',
       'blue',
-      'green'
+      'green',
+      'white'
     )
   }
 });

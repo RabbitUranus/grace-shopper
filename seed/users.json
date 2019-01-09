@@ -1,0 +1,95 @@
+{
+  "users": [
+    {
+      "name": "Able Baker",
+      "phone": 5555555555,
+      "address": "123 Main Street, Anytown, NY 12345",
+      "email": "able@baker.com",
+      "password": "thisIsAPassword"
+    },
+    {
+      "name": "Charlie Delta",
+      "phone": 5555555556,
+      "address": "124 Main Street, Anytown, NY 12345",
+      "email": "charlie@delta.com",
+      "password": "thisIsAPassword"
+    },
+    {
+      "name": "Echo Foxtrot",
+      "phone": 5555555557,
+      "address": "125 Main Street, Anytown, NY 12345",
+      "email": "echo@foxtrot.com",
+      "password": "thisIsAPassword"
+    },
+    {
+      "name": "Golf Hotel",
+      "phone": 5555555558,
+      "address": "126 Main Street, Anytown, NY 12345",
+      "email": "golf@hotel.com",
+      "password": "thisIsAPassword"
+    },
+    {
+      "name": "India Juliett",
+      "phone": 5555555559,
+      "address": "127 Main Street, Anytown, NY 12345",
+      "email": "india@juliett.com",
+      "password": "thisIsAPassword"
+    },
+    {
+      "name": "Kilo Lima",
+      "phone": 5555555560,
+      "address": "128 Main Street, Anytown, NY 12345",
+      "email": "kilo@lima.com",
+      "password": "thisIsAPassword"
+    },
+    {
+      "name": "Mike November",
+      "phone": 5555555561,
+      "address": "129 Main Street, Anytown, NY 12345",
+      "email": "mike@november.com",
+      "password": "thisIsAPassword"
+    },
+    {
+      "name": "Oscar Papa",
+      "phone": 5555555562,
+      "address": "130 Main Street, Anytown, NY 12345",
+      "email": "oscar@papa.com",
+      "password": "thisIsAPassword"
+    },
+    {
+      "name": "Quebec Romeo",
+      "phone": 5555555563,
+      "address": "131 Main Street, Anytown, NY 12345",
+      "email": "quebec@romeo.com",
+      "password": "thisIsAPassword"
+    },
+    {
+      "name": "Sierra Tango",
+      "phone": 5555555564,
+      "address": "132 Main Street, Anytown, NY 12345",
+      "email": "sierra@tango.com",
+      "password": "thisIsAPassword"
+    },
+    {
+      "name": "Uniform Victor",
+      "phone": 5555555565,
+      "address": "133 Main Street, Anytown, NY 12345",
+      "email": "uniform@victor.com",
+      "password": "thisIsAPassword"
+    },
+    {
+      "name": "Whiskey Xray",
+      "phone": 5555555566,
+      "address": "134 Main Street, Anytown, NY 12345",
+      "email": "whiskey@xray.com",
+      "password": "thisIsAPassword"
+    },
+    {
+      "name": "Yankee Zulu",
+      "phone": 5555555567,
+      "address": "135 Main Street, Anytown, NY 12345",
+      "email": "yankee@zulu.com",
+      "password": "thisIsAPassword"
+    }
+  ]
+}
