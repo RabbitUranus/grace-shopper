@@ -14,6 +14,7 @@ import axios from 'axios';
 // };
 
 export class AllProducts extends Component {
+
   componentDidMount() {
     this.props.fetchProducts();
   }
@@ -40,4 +41,7 @@ const mapDispatchToProps = dispatch => ({
   fetchProducts: () => dispatch(fetchProducts())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(AllProducts);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AllProducts);
