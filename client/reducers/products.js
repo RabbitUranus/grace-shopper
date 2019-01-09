@@ -14,18 +14,18 @@ export const requestProducts = products => ({
 });
 
 //THUNK CREATOR
-export function fetchProducts() {
-  return async function(dispatch) {
-    const {data} = await axios.get('/api/products');
-    // const data = ['Hello world!'];
-    dispatch(requestProducts(data));
-  };
-}
+export const fetchProducts = () => async dispatch => {
+  const {data} = await axios.get('/api/products');
+  console.log(data);
+  const action = requestProducts(data);
+  dispatch(action);
+};
 
-export default function reducer(state = initialState, action) {
+export default function products(state = initialState, action) {
   switch (action.type) {
     case REQUEST_PRODUCTS:
-      return action.payload;
+      state.products = action.payload;
+      return state.products;
     default:
       return state;
   }
