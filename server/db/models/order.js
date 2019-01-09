@@ -8,10 +8,15 @@ const Order = db.define('order', {
     type: Sequelize.STRING
   },
   amount: {
-    type: Sequelize.INTEGER
+    type: Sequelize.INTEGER,
+    allowNull: false,
+    validate: {
+      min: 1
+    }
   },
   items: {
-    type: Sequelize.ARRAY(Sequelize.INTEGER)
+    type: Sequelize.ARRAY(Sequelize.INTEGER),
+    allowNull: false
   }
 });
 
