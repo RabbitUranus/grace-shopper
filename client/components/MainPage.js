@@ -1,5 +1,5 @@
 import React from 'react';
-import {connect} from 'react-redux';
+// import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 
 export const MainPage = () => {
@@ -14,6 +14,9 @@ export const MainPage = () => {
         </div>
         <div>
           <Link to="/earrings">Earrings</Link>
+        </div>
+        <div>
+          <Link to="/products">All products</Link>
         </div>
       </nav>
     </div>
