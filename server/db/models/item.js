@@ -24,10 +24,10 @@ const Item = db.define('item', {
     }
   },
   price: {
-    type: Sequelize.DECIMAL,
+    type: Sequelize.INTEGER,
     allowNull: false,
     validate: {
-      min: 0.0
+      min: 0
     }
   },
   color: {
