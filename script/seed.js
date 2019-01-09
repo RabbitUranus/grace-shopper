@@ -4,15 +4,17 @@ const db = require('../server/db');
 const {User, Item} = require('../server/db/models');
 
 const {items} = require('../seed/items');
+const {users} = require('../seed/users.json');
 
 async function seed() {
   await db.sync({force: true});
   console.log('db synced!');
 
-  // const users = await Promise.all([
-  //   User.create({email: 'cody@email.com', password: '123'}),
-  //   User.create({email: 'murphy@email.com', password: '123'})
-  // ]);
+  await Promise.all(
+    users.map(async user => {
+      await User.create(user);
+    })
+  );
 
   await Promise.all(
     items.map(async element => {
@@ -51,4 +53,3 @@ if (module === require.main) {
 
 // we export the seed function for testing purposes (see `./seed.spec.js`)
 module.exports = seed;
-
