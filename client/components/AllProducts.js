@@ -14,39 +14,19 @@ import axios from 'axios';
 // };
 
 export class AllProducts extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      products: []
-    };
-  }
-
-  async componentDidMount() {
-    const {data} = await axios.get('/api/products');
-    this.setState({
-      products: data
-    });
-    console.log(this.props, '*****');
-    // console.log('componentDidMount', this.state.products);
-    // this.render();
-    // console.log(fetchProducts);
-    // this.props.fetchProducts();
+  componentDidMount() {
+    this.props.fetchProducts();
   }
 
   render() {
-    const products = this.state.products || [];
-    console.log('render', this.state.products);
+    const products = this.props.products;
     return (
       <div>
         <h1>All Products</h1>
-        {/* <SingleProduct product={dummyData} /> */}
-        {this.state.products ? (
+        {this.props.products.length &&
           products.map(product => (
             <SingleProduct product={product} key={product.id} />
-          ))
-        ) : (
-          <div />
-        )}
+          ))}
       </div>
     );
   }
