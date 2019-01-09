@@ -9,12 +9,17 @@ async function seed() {
   await db.sync({force: true});
   console.log('db synced!');
 
-  const users = await Promise.all([
-    User.create({name: 'cody', email: 'cody@email.com', password: '123'}),
-    User.create({name: 'murphy', email: 'murphy@email.com', password: '123'})
-  ]);
+  // const users = await Promise.all([
+  //   User.create({email: 'cody@email.com', password: '123'}),
+  //   User.create({email: 'murphy@email.com', password: '123'})
+  // ]);
 
-  console.log(`seeded ${users.length} users`);
+  await Promise.all(
+    items.map(async element => {
+      await Item.create(element);
+    })
+  );
+
   console.log(`seeded successfully`);
 }
 
@@ -25,6 +30,7 @@ async function runSeed() {
   console.log('seeding...');
   try {
     await seed();
+    console.log('finished seed');
   } catch (err) {
     console.error(err);
     process.exitCode = 1;
@@ -40,7 +46,9 @@ async function runSeed() {
 // any errors that might occur inside of `seed`.
 if (module === require.main) {
   runSeed();
+  console.log('I ran the seed');
 }
 
 // we export the seed function for testing purposes (see `./seed.spec.js`)
 module.exports = seed;
+
