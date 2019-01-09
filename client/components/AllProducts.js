@@ -26,7 +26,7 @@ export class AllProducts extends Component {
     this.setState({
       products: data
     });
-    console.log(this.props, '*****');
+    // console.log(this.props, '*****');
     // console.log('componentDidMount', this.state.products);
     // this.render();
     // console.log(fetchProducts);
@@ -35,7 +35,7 @@ export class AllProducts extends Component {
 
   render() {
     const products = this.state.products || [];
-    console.log('render', this.state.products);
+    // console.log('render', this.state.products);
     return (
       <div>
         <h1>All Products</h1>
@@ -60,4 +60,7 @@ const mapDispatchToProps = dispatch => ({
   fetchProducts: () => dispatch(fetchProducts())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(AllProducts);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AllProducts);

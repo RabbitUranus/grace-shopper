@@ -57,7 +57,8 @@
     "redux-logger": "^2.8.1",
     "redux-thunk": "^2.3.0",
     "sequelize": "^4.38.0",
-    "socket.io": "^2.1.1"
+    "socket.io": "^2.1.1",
+    "webpack": "^4.28.1"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.55",
@@ -95,7 +96,6 @@
     "redux-devtools-extension": "^2.13.5",
     "redux-mock-store": "^1.5.3",
     "supertest": "^3.1.0",
-    "webpack": "^4.16.4",
     "webpack-cli": "^3.1.0"
   }
 }
