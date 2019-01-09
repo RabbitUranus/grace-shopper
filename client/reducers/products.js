@@ -1,11 +1,11 @@
 import axios from 'axios';
 
 //ACTION TYPE
-const REQUEST_PRODUCTS = 'REQUEST_PRODUCTS';
+export const REQUEST_PRODUCTS = 'REQUEST_PRODUCTS';
 
 //INITIAL STATE
 
-const initialState = {products: []};
+export const initialState = {products: []};
 
 //ACTION CREATOR
 export const requestProducts = products => ({
