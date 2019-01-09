@@ -4,15 +4,6 @@ import {fetchProducts} from '../reducers/products';
 
 import SingleProduct from './SingleProduct';
 
-import axios from 'axios';
-
-// const dummyData = {
-//   name: 'watch',
-//   description: 'nice watch',
-//   price: 50,
-//   image: 'abc'
-// };
-
 export class AllProducts extends Component {
 
   componentDidMount() {
