@@ -5,9 +5,9 @@ import {fetchProduct} from '../reducers/cart';
 export class SingleProduct extends Component {
   constructor(props) {
     super(props);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
-  handleSubmit() {
+  handleClick() {
     this.props.fetchProduct(this.props.product.id);
     console.log('cart contains:', this.props.cart);
   }
@@ -23,7 +23,7 @@ export class SingleProduct extends Component {
           <img src={image} />
           <li>{price}</li>
         </ul>
-        <button type="submit" onSubmit={this.handleSubmit}>
+        <button type="submit" onClick={this.handleClick}>
           Add to Cart
         </button>
       </div>
@@ -39,7 +39,4 @@ const mapDispatchToProps = dispatch => ({
   fetchProduct: id => dispatch(fetchProduct(id))
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SingleProduct);
+export default connect(mapStateToProps, mapDispatchToProps)(SingleProduct);

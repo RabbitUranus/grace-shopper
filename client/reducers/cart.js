@@ -20,10 +20,11 @@ export const fetchProduct = id => async dispatch => {
 export const defaultCart = {cart: []};
 
 export default function cart(state = defaultCart, action) {
+  const newState = {...state};
   switch (action.type) {
     case ADD_PRODUCT_TO_CART:
-      state.cart = [...state.cart, action.product];
-      return state.cart;
+      newState.cart = [...newState.cart, action.product];
+      return newState;
     default:
       return state;
   }
