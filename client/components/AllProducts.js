@@ -27,7 +27,7 @@ export class AllProducts extends Component {
       products: data
     };
     console.log('componentDidMount', data);
-    this.render();
+    // this.render();
     // this.props.fetchProducts();
   }
   // async componentDidUpdate() {
