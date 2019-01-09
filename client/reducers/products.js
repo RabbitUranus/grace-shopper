@@ -15,9 +15,7 @@ export const requestProducts = products => ({
 
 //THUNK CREATOR
 export const fetchProducts = () => async dispatch => {
-  console.log('entering here');
   const {data} = await axios.get('/api/products');
-  console.log(data, 'fetch product');
   const action = requestProducts(data);
   dispatch(action);
 };
