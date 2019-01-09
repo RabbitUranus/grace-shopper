@@ -24,7 +24,7 @@ router.get('/', async (req, res, next) => {
 router.post('/', async (req, res, next) => {
   try {
     const order = await Order.create(req.body);
-    res.json(order);
+    res.status(201).json(order);
   } catch (err) {
     next(err);
   }
