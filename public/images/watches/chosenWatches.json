@@ -1,296 +1,273 @@
 {
   "watches": [
     {
-      "pageURL": "https://pixabay.com/en/pocket-watch-clock-time-old-2031021/",
-      "image": "pocket-watch-2031021_1280.jpg",
-      "price": null,
-      "color": null,
-      "name": "",
+      "image": "public/images/watches/pocket-watch-2031021_1280.jpg",
+      "price": 200.0,
+      "color": "gold",
+      "name": "Large analog pocket watch with visible works",
       "category": "watch",
-      "description": "lorem ipsum"
+      "description":
+        "Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
     },
     {
-      "id": 410328,
-      "pageURL":
-        "https://pixabay.com/en/waiting-appointment-schedule-time-410328/",
-      "imgURI": "waiting-410328_1280.jpg",
-      "type": "photo",
-      "tags": "waiting, appointment, schedule",
-      "price": null,
-      "category": ["watch, wrist-watch"]
+      "image": "public/images/watches/waiting-410328_1280.jpg",
+      "name": "Man's gold wristwatch",
+      "color": "gold",
+      "price": 130.0,
+      "category": "watch",
+      "description":
+        "Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna."
     },
     {
-      "id": 2061228,
-      "pageURL":
-        "https://pixabay.com/en/pocket-watch-time-clock-time-of-2061228/",
-      "imgURI": "pocket-watch-2061228_1280.jpg",
-      "type": "photo",
-      "tags": "pocket watch, time, clock",
-      "price": null,
-      "category": ["watch, pocket-watch"]
+      "image": "public/images/watches/pocket-watch-2061228_1280.jpg",
+      "name": "Pocket watch with white face and black hands",
+      "color": "gold",
+      "price": 125.0,
+      "category": "watch",
+      "description":
+        "Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris."
     },
     {
-      "id": 821557,
-      "pageURL":
-        "https://pixabay.com/en/smart-watch-apple-technology-style-821557/",
-      "imgURI": "smart-watch-821557_1280.jpg",
-      "type": "photo",
-      "tags": "smart watch, apple, technology",
-      "price": null,
-      "category": ["watch, wrist-watch"]
+      "image": "public/images/watches/smart-watch-821557_1280.jpg",
+      "name": "Montreal smart watch",
+      "color": "white",
+      "price": 576.0,
+      "category": "watch",
+      "description":
+        "Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut orci risus, accumsan porttitor, cursus quis, aliquet eget, justo. Sed pretium blandit orci."
     },
     {
-      "id": 1149669,
-      "pageURL":
-        "https://pixabay.com/en/wristwatch-pocket-hand-time-male-1149669/",
-      "imgURI": "wristwatch-1149669_1280.jpg",
-      "type": "photo",
-      "tags": "wristwatch, pocket, hand",
-      "price": null,
-      "category": ["watch, wrist-watch"]
+      "image": "public/images/watches/wristwatch-1149669_1280.jpg",
+      "name": "Silver and bronze wristwatch with diamonds",
+      "color": "silver",
+      "price": 2176.0,
+      "category": "watch",
+      "description":
+        "Ut eu diam at pede suscipit sodales. Aenean lectus elit, fermentum non, convallis id, sagittis at, neque. Nullam mauris orci, aliquet et, iaculis et, viverra vitae, ligula. Nulla ut felis in purus aliquam imperdiet. Maecenas aliquet mollis lectus. Vivamus consectetuer risus et tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi."
     },
     {
-      "id": 828848,
-      "pageURL": "https://pixabay.com/en/watch-timepiece-woman-wearing-828848/",
-      "imgURI": "watch-828848_1280.jpg",
-      "type": "photo",
-      "tags": "watch, timepiece, woman",
-      "price": null,
-      "category": ["watch, wrist-watch"]
+      "image": "public/images/watches/watch-828848_1280.jpg",
+      "name": "Women's red, white, and blue analog watch",
+      "color": "white",
+      "price": 38.5,
+      "category": "watch",
+      "description":
+        "Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam."
     },
     {
-      "id": 821559,
-      "pageURL":
-        "https://pixabay.com/en/smart-watch-apple-technology-style-821559/",
-      "imgURI": "smart-watch-822559_1280.jpg",
-      "type": "photo",
-      "tags": "smart watch, apple, technology",
-      "price": null,
-      "category": ["watch, wrist-watch"]
+      "image": "public/images/watches/smart-watch-821559_1280.jpg",
+      "name": "White smart watch, square face",
+      "color": "white",
+      "price": 575.25,
+      "category": "watch",
+      "description":
+        "In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
     },
     {
-      "id": 2159351,
-      "pageURL":
-        "https://pixabay.com/en/wrist-watch-clock-tie-mens-man-2159351/",
-      "imgURI": "wrist-watch-2159351_1280.jpg",
-      "type": "photo",
-      "tags": "wrist watch, clock, tie",
-      "price": null,
-      "category": ["watch, wrist-watch"]
+      "image": "public/images/watches/wrist-watch-2159351_1280.jpg",
+      "name": "Men's analog watch with brown leather strap",
+      "color": "brown",
+      "price": 897.75,
+      "category": "watch",
+      "description":
+        "Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam."
     },
     {
-      "id": 1869928,
-      "pageURL":
-        "https://pixabay.com/en/analog-watch-time-watch-wrist-watch-1869928/",
-      "imgURI": "analog-watch-1869928_1280.jpg",
-      "type": "photo",
-      "tags": "analog watch, time, watch",
-      "price": null,
-      "category": ["watch, wrist-watch"]
+      "image": "public/images/watches/analog-watch-1869928_1280.jpg",
+      "name": "Analog Rider watch with leather band",
+      "color": "brown",
+      "price": 243.0,
+      "category": "watch",
+      "description":
+        "In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor."
     },
     {
-      "id": 1245791,
-      "pageURL":
-        "https://pixabay.com/en/watch-time-time-management-clock-1245791/",
-      "imgURI": "watch-1245791_1280.jpg",
-      "type": "photo",
-      "tags": "watch, time, time management",
-      "price": null,
-      "category": ["watch, wrist-watch"]
+      "image": "public/images/watches/watch-1245791_1280.jpg",
+      "name": "Curren watch with multiple dials",
+      "color": "silver",
+      "price": 1245.0,
+      "category": "watch",
+      "description":
+        "Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut orci risus, accumsan porttitor, cursus quis, aliquet eget, justo. Sed pretium blandit orci. Ut eu diam at pede suscipit sodales. Aenean lectus elit, fermentum non, convallis id, sagittis at, neque. Nullam mauris orci, aliquet et, iaculis et, viverra vitae, ligula. Nulla ut felis in purus aliquam imperdiet."
     },
     {
-      "id": 425818,
-      "pageURL":
-        "https://pixabay.com/en/time-clock-watch-pocket-watch-hour-425818/",
-      "imgURI": "time-425818_1280.jpg",
-      "type": "photo",
-      "tags": "time, clock, watch",
-      "price": null,
-      "category": ["watch, pocket-watch"]
+      "image": "public/images/watches/time-425818_1280.jpg",
+      "name": "Analog pocket watch, no cover",
+      "color": "silver",
+      "price": 589.0,
+      "category": "watch",
+      "description":
+        "Maecenas aliquet mollis lectus. Vivamus consectetuer risus et tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
     },
     {
-      "id": 623168,
-      "pageURL": "https://pixabay.com/en/clock-time-pocket-watch-old-623168/",
-      "imageURI": "clock-623168_1280.jpg",
-      "type": "photo",
-      "tags": "clock, time, pocket watch",
-      "price": null,
-      "category": ["watch, pocket-watch"]
+      "image": "public/images/watches/clock-623168_1280.jpg",
+      "name": "Antique pocket watch",
+      "color": "gold",
+      "price": 878.0,
+      "category": "watch",
+      "description":
+        "Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum."
     },
     {
-      "id": 2133289,
-      "pageURL":
-        "https://pixabay.com/en/swatch-watch-wristwatch-time-watch-2133289/",
-      "imgURI": "swatch-watch-2133289_1280.jpg",
-      "type": "photo",
-      "tags": "swatch watch, wristwatch, time",
-      "price": null,
-      "category": ["watch, wrist-watch"]
+      "image": "public/images/watches/swatch-watch-2133289_1280.jpg",
+      "name": "Analog watch with silver band",
+      "color": "silver",
+      "price": 78.0,
+      "category": "watch",
+      "description":
+        "Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit."
     },
     {
-      "id": 623170,
-      "pageURL": "https://pixabay.com/en/clock-time-pocket-watch-old-623170/",
-      "imgURI": "clock-623170_1280.jpg",
-      "type": "photo",
-      "previewHeight": 99,
-      "tags": "clock, time, pocket watch",
-      "price": null,
-      "category": ["watch, wrist-watch"]
+      "image": "public/images/watches/clock-623170_1280.jpg",
+      "name": "Antique pocket watch with cutwork",
+      "color": "gold",
+      "price": 867.0,
+      "category": "watch",
+      "description":
+        "Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim."
     },
     {
-      "id": 183143,
-      "pageURL":
-        "https://pixabay.com/en/wrist-watch-watch-clock-time-style-183143/",
-      "imageURI": "wrist-watch-183143_1280.jpg",
-      "type": "photo",
-      "tags": "wrist watch, watch, clock",
-      "price": null,
-      "category": ["watch, wrist-watch"]
+      "image": "public/images/watches/wrist-watch-183143_1280.jpg",
+      "name": "Diamond Dior analog watch",
+      "color": "brown",
+      "price": 1400.0,
+      "category": "watch",
+      "description":
+        "Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
     },
     {
-      "id": 2254969,
-      "pageURL":
-        "https://pixabay.com/en/wrist-watch-black-and-white-minute-2254969/",
-      "imageURI": "wrist-2254969_1280.jpg",
-      "type": "photo",
-      "tags": "wrist, watch, black and white",
-      "price": null,
-      "category": ["watch, wrist-watch"]
+      "image": "public/images/watches/wrist-2254969_1280.jpg",
+      "name": "Multidial wrist watch",
+      "color": "black",
+      "price": 247.0,
+      "category": "watch",
+      "description":
+        "Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna."
     },
     {
-      "id": 487055,
-      "pageURL": "https://pixabay.com/en/girl-woman-time-time-travel-487055/",
-      "imageURI": "girl-487055_1280.jpg",
-      "type": "photo",
-      "tags": "girl, woman, time",
-      "price": null,
-      "category": ["watch, clock"]
+      "image": "public/images/watches/girl-487055_1280.jpg",
+      "name": "Miniature grandfather clock",
+      "color": "red",
+      "price": 2400.0,
+      "category": "watch",
+      "description":
+        "Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna."
     },
     {
-      "id": 2058930,
-      "pageURL":
-        "https://pixabay.com/en/pocket-watch-time-clock-time-of-2058930/",
-      "imageURI": "pocket-watch-2058930_1280.jpg",
-      "type": "photo",
-      "tags": "pocket watch, time, clock",
-      "price": null,
-      "category": ["watch, pocket-watch"]
+      "image": "public/images/watches/pocket-watch-2058930_1280.jpg",
+      "name": "Pocket watch works exposed",
+      "color": "gold",
+      "price": 1200.0,
+      "category": "watch",
+      "description":
+        "Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris."
     },
     {
-      "id": 828902,
-      "pageURL": "https://pixabay.com/en/watch-time-hour-minute-hand-828902/",
-      "imageURI": "watch-828902_1280.jpg",
-      "type": "photo",
-      "tags": "watch, time, hour",
-      "price": null,
-      "category": ["watch, wrist-watch"]
+      "image": "public/images/watches/watch-828902_1280.jpg",
+      "name": "Analog watch with black metal band",
+      "color": "black",
+      "price": 209.0,
+      "category": "watch",
+      "description":
+        "Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut orci risus, accumsan porttitor, cursus quis, aliquet eget, justo. Sed pretium blandit orci."
     },
     {
-      "id": 821565,
-      "pageURL":
-        "https://pixabay.com/en/smart-watch-apple-technology-style-821565/",
-      "imageURI": "smart-watch-821565_1280.jpg",
-      "type": "photo",
-      "tags": "smart watch, apple, technology",
-      "price": null,
-      "category": ["watch, wrist-watch"]
+      "image": "public/images/watches/smart-watch-821565_1280.jpg",
+      "name": "Watch for ordering coffee",
+      "color": "white",
+      "price": 399.0,
+      "category": "watch",
+      "description":
+        "Ut eu diam at pede suscipit sodales. Aenean lectus elit, fermentum non, convallis id, sagittis at, neque. Nullam mauris orci, aliquet et, iaculis et, viverra vitae, ligula. Nulla ut felis in purus aliquam imperdiet. Maecenas aliquet mollis lectus. Vivamus consectetuer risus et tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi."
     },
     {
-      "id": 698498,
-      "pageURL":
-        "https://pixabay.com/en/watch-time-bracelet-hand-young-698498/",
-      "imageURI": "watch-698498_1280.jpg",
-      "type": "photo",
-      "tags": "watch, time, bracelet",
-      "price": null,
-      "category": ["watch, wrist-watch"]
+      "image": "public/images/watches/watch-698498_1280.jpg",
+      "name": "Bracelet wristwatch",
+      "color": "silver",
+      "price": 136.0,
+      "category": "watch",
+      "description":
+        "Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam."
     },
     {
-      "id": 916400,
-      "pageURL":
-        "https://pixabay.com/en/fashion-watch-minimal-style-man-916400/",
-      "imageURI": "fashion-916400_1280.jpg",
-      "type": "photo",
-      "tags": "fashion, watch, minimal",
-      "price": null,
-      "category": ["watch, wrist-watch"]
+      "image": "public/images/watches/fashion-916400_1280.jpg",
+      "name": "Minimalist wristwatch",
+      "color": "black",
+      "price": 297.0,
+      "category": "watch",
+      "description":
+        "In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
     },
     {
-      "id": 684840,
-      "pageURL": "https://pixabay.com/en/watch-pocket-watch-time-clock-684840/",
-      "imageURI": "watch-684840_1280.jpg",
-      "type": "photo",
-      "tags": "watch, pocket watch, time",
-      "price": null,
-      "category": ["watch, pocket-watch"]
+      "image": "public/images/watches/watch-684840_1280.jpg",
+      "name": "Pendant pocket watch",
+      "color": "silver",
+      "price": 465.0,
+      "category": "watch",
+      "description":
+        "Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam."
     },
     {
-      "id": 1663246,
-      "pageURL":
-        "https://pixabay.com/en/watch-basketball-sport-active-1663246/",
-      "imageURI": "watch-1663246_1280.jpg",
-      "type": "photo",
-      "tags": "watch, basketball, sport",
-      "price": null,
-      "category": ["watch, wrist-watch"]
+      "image": "public/images/watches/watch-1663246_1280.jpg",
+      "name": "Sports wristwatch",
+      "color": "black",
+      "price": 305.0,
+      "category": "watch",
+      "description":
+        "In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor."
     },
     {
-      "id": 161854,
-      "pageURL":
-        "https://pixabay.com/en/wristwatch-watch-wrist-watch-ticker-161854/",
-      "imageURI": "wristwatch-161854_1280.png",
-      "type": "vector/svg",
-      "tags": "wristwatch, watch, wrist watch",
-      "price": null,
-      "category": ["watch, wrist-watch"]
+      "image": "public/images/watches/wristwatch-161854_1280.png",
+      "name": "Multidial luminescent wristwatch",
+      "color": "silver",
+      "price": 695.0,
+      "category": "watch",
+      "description":
+        "Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet. Vestibulum nisi lectus, commodo ac, facilisis ac, ultricies eu, pede. Ut orci risus, accumsan porttitor, cursus quis, aliquet eget, justo. Sed pretium blandit orci. Ut eu diam at pede suscipit sodales. Aenean lectus elit, fermentum non, convallis id, sagittis at, neque. Nullam mauris orci, aliquet et, iaculis et, viverra vitae, ligula. Nulla ut felis in purus aliquam imperdiet."
     },
     {
-      "id": 3363690,
-      "pageURL":
-        "https://pixabay.com/en/clock-pocket-watch-time-time-of-3363690/",
-      "imageURI": "clock-3363690_1280.jpg",
-      "type": "photo",
-      "tags": "clock, pocket watch, time",
-      "price": null,
-      "category": ["watch, pocket-watch"]
+      "image": "public/images/watches/clock-3363690_1280.jpg",
+      "name": "Scrollwork pocket watch",
+      "color": "silver",
+      "price": 776.0,
+      "category": "watch",
+      "description":
+        "Maecenas aliquet mollis lectus. Vivamus consectetuer risus et tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
     },
     {
-      "id": 1869926,
-      "pageURL":
-        "https://pixabay.com/en/accessory-analog-elegant-fashion-1869926/",
-      "imageURI": "accessory-1869926_1280.jpg",
-      "type": "photo",
-      "tags": "accessory, analog, elegant",
-      "price": null,
-      "category": ["watch, wrist-watch"]
+      "image": "public/images/watches/accessory-1869926_1280.jpg",
+      "name": "Rider brown leather analog watch",
+      "color": "brown",
+      "price": 243.0,
+      "category": "watch",
+      "description":
+        "Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum."
     },
     {
-      "id": 821558,
-      "pageURL":
-        "https://pixabay.com/en/smart-watch-apple-technology-style-821558/",
-      "imageURI": "smart-watch-821558_1280.jpg",
-      "type": "photo",
-      "tags": "smart watch, apple, technology",
-      "price": null,
-      "category": ["watch, wrist-watch"]
+      "image": "public/images/watches/smart-watch-821558_1280.jpg",
+      "name": "Smartwatch with timer",
+      "color": "white",
+      "price": 323.0,
+      "category": "watch",
+      "description":
+        "Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit."
     },
     {
-      "id": 2582815,
-      "pageURL":
-        "https://pixabay.com/en/people-woman-time-clock-watch-2582815/",
-      "imageURI": "people-2582815_1280.jpg",
-      "type": "photo",
-      "tags": "people, woman, time",
-      "price": null,
-      "category": ["watch, wrist-watch"]
+      "image": "public/images/watches/people-2582815_1280.jpg",
+      "name": "Gift pocket watch",
+      "color": "gold",
+      "price": 467.0,
+      "category": "watch",
+      "description":
+        "Sed lectus. Integer euismod lacus luctus magna. Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui. Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim."
     },
     {
-      "id": 164873,
-      "pageURL": "https://pixabay.com/en/watch-pocket-watch-clock-time-164873/",
-      "imageURI": "watch-164873_1280.jpg",
-      "type": "photo",
-      "tags": "watch, pocket watch, clock",
-      "category": ["watch, pocket-watch"]
+      "image": "public/images/watches/watch-164873_1280.jpg",
+      "name": "Pocket watch on long chain",
+      "color": "silver",
+      "category": "watch",
+      "description":
+        "Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
     }
   ]
 }
