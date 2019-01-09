@@ -16,11 +16,12 @@ export class AllProducts extends Component {
     super(props);
   }
 
-  componentDidMount() {
-    this.props.fetchProducts();
-  }
+  // componentDidMount() {
+  //   console.log(this.props);
+  //   this.props.fetchProducts();
+  // }
   render() {
-    const products = this.props.products;
+    // const products = this.props.products || [];
     return (
       <div>
         <h1>All Products</h1>
