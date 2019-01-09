@@ -24,22 +24,15 @@ export class AllProducts extends Component {
 
   async componentDidMount() {
     const {data} = await axios.get('/api/products');
-    this.setState = {
+    this.setState({
       products: data
-    };
-    console.log('componentDidMount', data);
+    });
+    // console.log('componentDidMount', this.state.products);
     // this.render();
+    // console.log(fetchProducts);
     // this.props.fetchProducts();
   }
-  // async componentDidUpdate() {
-  //   const {data} = await axios.get('/api/products');
-  //   this.setState = {
-  //     products: data
-  //   };
-  //   console.log('componentDidUpdate', data);
-  //   // this.render();
-  //   // this.props.fetchProducts();
-  // }
+
   render() {
     const products = this.state.products || [];
     console.log('render', this.state.products);
@@ -47,9 +40,13 @@ export class AllProducts extends Component {
       <div>
         <h1>All Products</h1>
         {/* <SingleProduct product={dummyData} /> */}
-        {this.state.products.map(product => (
-          <SingleProduct product={product} />
-        ))}
+        {this.state.products ? (
+          this.state.products.map(product => (
+            <SingleProduct product={product} key={product.id} />
+          ))
+        ) : (
+          <div />
+        )}
       </div>
     );
   }
