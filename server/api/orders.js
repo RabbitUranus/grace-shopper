@@ -13,8 +13,8 @@ module.exports = router;
 // GET api/orders/
 router.get('/', async (req, res, next) => {
   try {
-    const products = await Order.findAll();
-    res.json(products);
+    const orders = await Order.findAll();
+    res.json(orders);
   } catch (err) {
     next(err);
   }
