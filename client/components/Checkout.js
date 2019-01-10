@@ -37,6 +37,13 @@ export class Checkout extends React.Component {
               </th>
             </tr>
           )}
+          {!isLoggedIn && (
+            <tr>
+              <th>
+                <button>Submit</button>
+              </th>
+            </tr>
+          )}
         </thead>
       </table>
     );
