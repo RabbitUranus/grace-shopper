@@ -5,12 +5,15 @@ import {fetchProduct} from '../reducers/cart';
 export class SingleItemDetail extends Component {
   constructor(props) {
     super(props);
-    this.id = this.props.product.id;
+    this.id = this.props.match.params.id;
+    console.log('SID props', this.props);
     this.handleClick = this.handleClick.bind(this);
   }
+  componentDidMount = () => {
+    this.setState({product: this.props.fetchProduct(this.id)});
+  };
   handleClick() {
-    this.props.fetchProduct(this.props.product.id);
-    const productId = this.props.product.id;
+    this.props.fetchProduct(this.id);
   }
 
   render() {
@@ -33,6 +36,7 @@ export class SingleItemDetail extends Component {
 
 const mapStateToProps = state => ({
   cart: state.cart,
+  products: state.products,
   product: state.product
 });
 

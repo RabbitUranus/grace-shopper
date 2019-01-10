@@ -5,7 +5,6 @@ import {fetchProducts} from '../reducers/products';
 import SingleProduct from './SingleProduct';
 
 export class AllProducts extends Component {
-
   componentDidMount() {
     this.props.fetchProducts();
   }
@@ -15,10 +14,13 @@ export class AllProducts extends Component {
     return (
       <div>
         <h1>All Products</h1>
-        {this.props.products.length &&
+        {this.props.products.length ? (
           products.map(product => (
             <SingleProduct product={product} key={product.id} />
-          ))}
+          ))
+        ) : (
+          <div />
+        )}
       </div>
     );
   }
@@ -32,7 +34,4 @@ const mapDispatchToProps = dispatch => ({
   fetchProducts: () => dispatch(fetchProducts())
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(AllProducts);
+export default connect(mapStateToProps, mapDispatchToProps)(AllProducts);

@@ -21,7 +21,7 @@ export class SingleProduct extends Component {
         <ul key={id}>
           <li>{name}</li>
           <li>{description}</li>
-          <Link to={`/products/{id}`}>
+          <Link to={`/product/:{id}`}>
             {' '}
             <img src={image} />{' '}
           </Link>
@@ -36,7 +36,8 @@ export class SingleProduct extends Component {
 }
 
 const mapStateToProps = state => ({
-  cart: state.cart
+  cart: state.cart,
+  products: state.products
 });
 
 const mapDispatchToProps = dispatch => ({
