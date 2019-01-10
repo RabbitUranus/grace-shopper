@@ -21,6 +21,7 @@ export class SingleItemDetail extends Component {
     const {name, description, image, price} = this.props.product;
     return (
       <div>
+        <h1>YOU ARE HERE</h1>
         <h2>{name}</h2>
         <img src={image} />
         <h4>{price}</h4>
