@@ -39,13 +39,15 @@ export class Cart extends React.Component {
                 <th>{product.price}</th>
               </tr>
             ))}
+          <tr>
+            <th>
+              <button onClick={this.homeRedirect}>Continue shopping</button>
+            </th>
+            <th>
+              <button onClick={this.checkoutRedirect}>Checkout</button>
+            </th>
+          </tr>
         </thead>
-        <th>
-          <button onClick={this.homeRedirect}>Continue shopping</button>
-        </th>
-        <th>
-          <button onClick={this.checkoutRedirect}>Checkout</button>
-        </th>
       </table>
     );
   }
