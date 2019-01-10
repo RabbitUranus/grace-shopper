@@ -1,24 +1,29 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {fetchProduct} from '../reducers/cart';
+import {fetchItem} from '../reducers/item';
 
 export class SingleItemDetail extends Component {
   constructor(props) {
     super(props);
-    this.id = this.props.match.params.id;
+    this.state = {};
+    this.id = +this.props.match.params.id;
     console.log('SID props', this.props);
     this.handleClick = this.handleClick.bind(this);
   }
+
   componentDidMount = () => {
-    this.setState({product: this.props.fetchProduct(this.id)});
+    console.log('in componentDidMount');
+    this.setState({product: this.props.fetchItem(this.id)});
+    console.log(this.state.product);
   };
+
   handleClick() {
-    this.props.fetchProduct(this.id);
+    this.props.fetchItem(this.id);
   }
 
   render() {
-    console.log('SingleItemDetail', this.props);
-    const {name, description, image, price} = this.props.product;
+    console.log('SingleItemDetail', this.props, this.id);
+    const {name, description, image, price} = this.props.item.item;
     return (
       <div>
         <h1>YOU ARE HERE</h1>
@@ -38,11 +43,11 @@ export class SingleItemDetail extends Component {
 const mapStateToProps = state => ({
   cart: state.cart,
   products: state.products,
-  product: state.product
+  item: state.item
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchProduct: id => dispatch(fetchProduct(id))
+  fetchItem: id => dispatch(fetchItem(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SingleItemDetail);
