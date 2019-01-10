@@ -75,7 +75,7 @@ const mapDispatch = dispatch => {
       }
       const email = evt.target.email.value;
       const password = evt.target.password.value;
-      console.log('handleSubmit', name, email, password, formName);
+
       dispatch(auth(name, email, password, formName));
     }
   };
