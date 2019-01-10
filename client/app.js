@@ -6,12 +6,14 @@ import Routes from './routes';
 import {FilterNav} from './components/FilterNav';
 import {MainPage} from './components/MainPage';
 import {Checkout} from './components/Checkout';
+import {Cart} from './components/Cart';
 
 const App = () => {
   return (
     <div>
       <Navbar />
       <Routes />
+      <Cart />
       <FilterNav />
       <AllProducts />
       <MainPage />
