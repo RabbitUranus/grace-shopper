@@ -11,13 +11,12 @@ import {Cart} from './components/Cart';
 const App = () => {
   return (
     <div>
-      <Navbar />
       <Routes />
-      <Cart />
-      <FilterNav />
-      <AllProducts />
+      {/* <Navbar /> */}
+      {/* <FilterNav /> */}
+      {/* <AllProducts />
       <MainPage />
-      <Checkout />
+      <Checkout /> */}
     </div>
   );
 };

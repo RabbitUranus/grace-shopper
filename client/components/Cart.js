@@ -1,7 +1,8 @@
 import React from 'react';
 
-export class Cart extends React.Component {
+export default class Cart extends React.Component {
   render() {
+    console.log('hello');
     return (
       <table>
         <thead>
