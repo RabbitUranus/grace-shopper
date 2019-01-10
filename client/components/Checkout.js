@@ -6,21 +6,35 @@ const dummyData = {
   address: '123 Main Street, Anytown, NY 12345'
 };
 
-export const Checkout = () => {
-  return (
-    <div>
-      <div>
-        <button type="button"> Checkout as Guest </button>
-        <button type="button"> Log in </button>
-      </div>
-      <div>
-        <h4>Personal Information</h4>
-        <a>{dummyData.name}</a>
-        <h4>Shipping Address</h4>
-        <a>{dummyData.address}</a>
-        <h4>Billing Address</h4>
-        <a>{dummyData.address}</a>
-      </div>
-    </div>
-  );
-};
+export class Checkout extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <table>
+        <thead>
+          <tr>
+            <th>Personal Information</th>
+            <th>{dummyData.name}</th>
+          </tr>
+          <tr>
+            <th>Shipping and Billing Address</th>
+            <th>{dummyData.address}</th>
+          </tr>
+
+          <tr>
+            <th>
+              <button onClick={this.homeRedirect}>Checkout as Guest</button>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <button onClick={this.checkoutRedirect}>Log in</button>
+            </th>
+          </tr>
+        </thead>
+      </table>
+    );
+  }
+}
