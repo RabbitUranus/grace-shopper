@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {sendOrder} from '../reducers/cart';
 
 const dummyData = {
   name: 'Able Baker',
@@ -11,11 +13,15 @@ export class Checkout extends React.Component {
     super(props);
     this.loginRedirect = this.loginRedirect.bind(this);
   }
+  componentDidMount() {
+    this.props.sendOrder();
+  }
   loginRedirect() {
     let path = `login`;
     this.props.history.push(path);
   }
   render() {
+    console.log(this.props.cart);
     const isLoggedIn = false; // This must be linked to the state
     return (
       <table>
@@ -49,3 +55,16 @@ export class Checkout extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  cart: state.cart.cart
+});
+
+const mapDispatchToProps = dispatch => ({
+  sendOrder: order => dispatch(sendOrder(order))
+});
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Checkout);

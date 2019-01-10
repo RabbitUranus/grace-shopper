@@ -19,8 +19,8 @@ export const fetchProduct = id => async dispatch => {
   const action = addProduct(data);
   dispatch(action);
 };
-export const sendOroduct = () => async dispatch => {
-  await axios.post('/api/orders');
+export const sendOrder = order => async dispatch => {
+  await axios.post('/api/orders', order);
   const action = submitOrder();
   dispatch(action);
 };
