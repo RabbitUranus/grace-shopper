@@ -4,7 +4,18 @@ import {connect} from 'react-redux';
 export class Cart extends React.Component {
   constructor(props) {
     super(props);
+    this.homeRedirect = this.homeRedirect.bind(this);
+    this.checkoutRedirect = this.checkoutRedirect.bind(this);
   }
+  homeRedirect() {
+    let path = `products`;
+    this.props.history.push(path);
+  }
+  checkoutRedirect() {
+    let path = `cart/checkout`;
+    this.props.history.push(path);
+  }
+
   render() {
     console.log('props', this.props);
     console.log('cart', Array.isArray(this.props.cart));
@@ -29,6 +40,12 @@ export class Cart extends React.Component {
               </tr>
             ))}
         </thead>
+        <th>
+          <button onClick={this.homeRedirect}>Continue shopping</button>
+        </th>
+        <th>
+          <button onClick={this.checkoutRedirect}>Checkout</button>
+        </th>
       </table>
     );
   }
