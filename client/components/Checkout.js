@@ -9,6 +9,11 @@ const dummyData = {
 export class Checkout extends React.Component {
   constructor(props) {
     super(props);
+    this.loginRedirect = this.loginRedirect.bind(this);
+  }
+  loginRedirect() {
+    let path = `login`;
+    this.props.history.push(path);
   }
   render() {
     return (
@@ -25,12 +30,12 @@ export class Checkout extends React.Component {
 
           <tr>
             <th>
-              <button onClick={this.homeRedirect}>Checkout as Guest</button>
+              <button>Checkout as Guest</button>
             </th>
           </tr>
           <tr>
             <th>
-              <button onClick={this.checkoutRedirect}>Log in</button>
+              <button onClick={this.loginRedirect}>Log in</button>
             </th>
           </tr>
         </thead>
