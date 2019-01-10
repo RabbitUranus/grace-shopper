@@ -17,10 +17,7 @@ export class Cart extends React.Component {
   }
 
   render() {
-    console.log('props', this.props);
-    console.log('cart', Array.isArray(this.props.cart));
     const {cart} = this.props;
-
     return (
       <table>
         <thead>
