@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {fetchProduct} from '../reducers/cart';
+import {Link} from 'react-router-dom';
 
 export class SingleProduct extends Component {
   constructor(props) {
@@ -14,13 +15,16 @@ export class SingleProduct extends Component {
 
   render() {
     console.log('SingleProduct', this.props);
-    const {name, description, image, price} = this.props.product;
+    const {name, description, image, price, id} = this.props.product;
     return (
       <div>
-        <ul>
+        <ul key={id}>
           <li>{name}</li>
           <li>{description}</li>
-          <img src={image} />
+          <Link to={`/product/:{id}`}>
+            {' '}
+            <img src={image} />{' '}
+          </Link>
           <li>{price}</li>
         </ul>
         <button type="submit" onClick={this.handleClick}>
@@ -32,7 +36,8 @@ export class SingleProduct extends Component {
 }
 
 const mapStateToProps = state => ({
-  cart: state.cart
+  cart: state.cart,
+  products: state.products
 });
 
 const mapDispatchToProps = dispatch => ({
