@@ -1,32 +1,28 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {fetchProduct} from '../reducers/cart';
-import {Link} from 'react-router-dom';
 
-export class SingleProduct extends Component {
+export class SingleItemDetail extends Component {
   constructor(props) {
     super(props);
+    this.id = this.props.product.id;
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
     this.props.fetchProduct(this.props.product.id);
-    console.log('cart contains:', this.props.cart);
+    const productId = this.props.product.id;
   }
 
   render() {
-    console.log('SingleProduct', this.props);
-    const {name, description, image, price, id} = this.props.product;
+    console.log('SingleItemDetail', this.props);
+    const {name, description, image, price} = this.props.product;
     return (
       <div>
-        <ul key={id}>
-          <li>{name}</li>
-          <li>{description}</li>
-          <Link to={`/products/{id}`}>
-            {' '}
-            <img src={image} />{' '}
-          </Link>
-          <li>{price}</li>
-        </ul>
+        <h2>{name}</h2>
+        <img src={image} />
+        <h4>{price}</h4>
+        <p>{description}</p>
+
         <button type="submit" onClick={this.handleClick}>
           Add to Cart
         </button>
@@ -36,11 +32,12 @@ export class SingleProduct extends Component {
 }
 
 const mapStateToProps = state => ({
-  cart: state.cart
+  cart: state.cart,
+  product: state.product
 });
 
 const mapDispatchToProps = dispatch => ({
   fetchProduct: id => dispatch(fetchProduct(id))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(SingleProduct);
+export default connect(mapStateToProps, mapDispatchToProps)(SingleItemDetail);
