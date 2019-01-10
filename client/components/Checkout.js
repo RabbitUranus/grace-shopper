@@ -16,6 +16,7 @@ export class Checkout extends React.Component {
     this.props.history.push(path);
   }
   render() {
+    const isLoggedIn = false; // This must be linked to the state
     return (
       <table>
         <thead>
@@ -28,16 +29,14 @@ export class Checkout extends React.Component {
             <th>{dummyData.address}</th>
           </tr>
 
-          <tr>
-            <th>
-              <button>Checkout as Guest</button>
-            </th>
-          </tr>
-          <tr>
-            <th>
-              <button onClick={this.loginRedirect}>Log in</button>
-            </th>
-          </tr>
+          {isLoggedIn && (
+            <tr>
+              <th>
+                <button>Checkout as Guest</button>
+                <button onClick={this.loginRedirect}>Log in</button>
+              </th>
+            </tr>
+          )}
         </thead>
       </table>
     );
