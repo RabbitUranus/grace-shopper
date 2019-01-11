@@ -12,16 +12,17 @@ export class Checkout extends React.Component {
   constructor(props) {
     super(props);
     this.loginRedirect = this.loginRedirect.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
-  // componentDidMount() {
-  //   this.props.sendOrder();
-  // }
+  handleSubmit() {
+    this.props.sendOrder(this.props.cart);
+  }
   loginRedirect() {
     let path = `login`;
     this.props.history.push(path);
   }
   render() {
-    console.log(this.props.cart);
+    const {cart} = this.props;
     const isLoggedIn = false; // This must be linked to the state
     return (
       <table>
@@ -34,6 +35,18 @@ export class Checkout extends React.Component {
             <th>Shipping and Billing Address</th>
             <th>{dummyData.address}</th>
           </tr>
+          <tr>
+            <th>Your order</th>
+          </tr>
+          {cart &&
+            cart.map(product => (
+              <tr key={product.id}>
+                <th>{product.name}</th>
+                <th>{product.price}</th>
+                <th>1</th>
+                <th>{product.price}</th>
+              </tr>
+            ))}
 
           {isLoggedIn && (
             <tr>
@@ -46,7 +59,7 @@ export class Checkout extends React.Component {
           {!isLoggedIn && (
             <tr>
               <th>
-                <button>Submit</button>
+                <button onClick={this.handleSubmit}>Complete</button>
               </th>
             </tr>
           )}
@@ -65,6 +78,6 @@ const mapDispatchToProps = dispatch => ({
 });
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Checkout);
