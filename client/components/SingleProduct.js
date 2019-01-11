@@ -25,7 +25,7 @@ export class SingleProduct extends Component {
             {' '}
             <img src={image} />{' '}
           </Link>
-          <li>{price}</li>
+          <li>${price / 100}</li>
         </ul>
         <button type="submit" onClick={this.handleClick}>
           Add to Cart
