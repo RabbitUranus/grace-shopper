@@ -6,6 +6,7 @@
 //   items: an array of integers, each integer is the ID of the product in the cart, allows multiples
 // }
 
+var stripe = require('stripe')('sk_test_EgxBM6gvCK9apeODdVILbLbN');
 const router = require('express').Router();
 const {Item, User, Order} = require('../db/models');
 module.exports = router;
@@ -23,8 +24,31 @@ router.get('/', async (req, res, next) => {
 //POST api/orders
 router.post('/', async (req, res, next) => {
   try {
-    const order = await Order.create(req.body);
+    let order = req.body;
+
+    const charge = await stripe.charges.create({
+      amount: 999,
+      currency: 'usd',
+      source: 'tok_visa'
+    });
+    order.chargeId = charge.id;
+
+    const response = await Order.create(order);
     res.status(201).json(order);
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.post('/stripe', async (req, res, next) => {
+  try {
+    const charge = await stripe.charges.create({
+      amount: 999,
+      currency: 'usd',
+      source: 'tok_visa'
+      //receipt_email: 'jenny.rosen@example.com',
+    });
+    res.json(charge);
   } catch (err) {
     next(err);
   }
