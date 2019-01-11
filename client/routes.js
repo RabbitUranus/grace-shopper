@@ -11,7 +11,7 @@ import {
   SingleItemDetail
 } from './components';
 import Cart from './components/Cart';
-import {Checkout} from './components/Checkout';
+import Checkout from './components/Checkout';
 import {me} from './store';
 
 /**

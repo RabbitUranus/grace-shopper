@@ -13,9 +13,9 @@ export class Checkout extends React.Component {
     super(props);
     this.loginRedirect = this.loginRedirect.bind(this);
   }
-  componentDidMount() {
-    this.props.sendOrder();
-  }
+  // componentDidMount() {
+  //   this.props.sendOrder();
+  // }
   loginRedirect() {
     let path = `login`;
     this.props.history.push(path);
