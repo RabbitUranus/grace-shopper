@@ -15,7 +15,9 @@ export class Checkout extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleSubmit() {
+    const path = 'checkout/thankyou';
     this.props.sendOrder(this.props.cart);
+    this.props.history.push(path);
   }
   loginRedirect() {
     let path = `login`;

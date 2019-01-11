@@ -2,7 +2,14 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {withRouter, Route, Switch} from 'react-router-dom';
 import PropTypes from 'prop-types';
-import {Login, Signup, UserHome, Navbar, AllProducts} from './components';
+import {
+  Login,
+  Signup,
+  UserHome,
+  Navbar,
+  AllProducts,
+  ThankYou
+} from './components';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import SingleItemDetail from './components/SingleItemDetail';
@@ -30,6 +37,7 @@ class Routes extends Component {
           <Route exact path="/products" component={AllProducts} />
           <Route exact path="/cart" component={Cart} />
           <Route exact path="/cart/checkout" component={Checkout} />
+          <Route exact path="/cart/checkout/thankyou" component={ThankYou} />
           {isLoggedIn && (
             <Switch>
               {/* Routes placed here are only available after logging in */}
@@ -65,7 +73,12 @@ const mapDispatch = dispatch => {
 
 // The `withRouter` wrapper makes sure that updates are not blocked
 // when the url changes
-export default withRouter(connect(mapState, mapDispatch)(Routes));
+export default withRouter(
+  connect(
+    mapState,
+    mapDispatch
+  )(Routes)
+);
 
 /**
  * PROP TYPES
