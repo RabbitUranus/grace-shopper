@@ -11,9 +11,6 @@ const dummyData = {
 export class Checkout extends React.Component {
   constructor(props) {
     super(props);
-    // this.state = {
-    //   itemId: this.props.
-    // };
     this.loginRedirect = this.loginRedirect.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -25,7 +22,6 @@ export class Checkout extends React.Component {
     this.props.history.push(path);
   }
   render() {
-    console.log('cart', this.props.cart);
     const {cart} = this.props;
     const isLoggedIn = false; // This must be linked to the state
     return (

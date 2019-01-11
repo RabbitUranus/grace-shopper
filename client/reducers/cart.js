@@ -28,20 +28,13 @@ export const sendOrder = orders => async dispatch => {
   });
   const reducer = (accumulator, currentValue) => accumulator + currentValue;
   const total = arrayOfPrices.reduce(reducer, 0);
-  console.log(
-    'arrayOfIds',
-    arrayOfIds,
-    'arrayOfPrices',
-    arrayOfPrices,
-    'total',
-    total
-  );
+
   const reqBody = {
     amount: total,
     chargeId: 'test',
     items: arrayOfIds
   };
-  console.log(reqBody);
+
   await axios.post('/api/orders', reqBody);
   const action = submitOrder();
   dispatch(action);
