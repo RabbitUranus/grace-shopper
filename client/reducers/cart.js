@@ -19,8 +19,30 @@ export const fetchProduct = id => async dispatch => {
   const action = addProduct(data);
   dispatch(action);
 };
-export const sendOrder = order => async dispatch => {
-  await axios.post('/api/orders', order);
+export const sendOrder = orders => async dispatch => {
+  const arrayOfIds = orders.map(el => {
+    return el.id;
+  });
+  const arrayOfPrices = orders.map(el => {
+    return el.price;
+  });
+  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  const total = arrayOfPrices.reduce(reducer, 0);
+  console.log(
+    'arrayOfIds',
+    arrayOfIds,
+    'arrayOfPrices',
+    arrayOfPrices,
+    'total',
+    total
+  );
+  const reqBody = {
+    amount: total,
+    chargeId: 'test',
+    items: arrayOfIds
+  };
+  console.log(reqBody);
+  await axios.post('/api/orders', reqBody);
   const action = submitOrder();
   dispatch(action);
 };

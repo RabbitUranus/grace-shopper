@@ -11,11 +11,15 @@ const dummyData = {
 export class Checkout extends React.Component {
   constructor(props) {
     super(props);
+    // this.state = {
+    //   itemId: this.props.
+    // };
     this.loginRedirect = this.loginRedirect.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
-  // componentDidMount() {
-  // this.props.sendOrder();
-  // }
+  handleSubmit() {
+    this.props.sendOrder(this.props.cart);
+  }
   loginRedirect() {
     let path = `login`;
     this.props.history.push(path);
@@ -59,7 +63,7 @@ export class Checkout extends React.Component {
           {!isLoggedIn && (
             <tr>
               <th>
-                <button>Submit</button>
+                <button onClick={this.handleSubmit}>Complete</button>
               </th>
             </tr>
           )}
