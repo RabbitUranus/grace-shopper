@@ -26,10 +26,9 @@ export class SingleItemDetail extends Component {
     const {name, description, image, price} = this.props.item.item;
     return (
       <div>
-        <h1>YOU ARE HERE</h1>
         <h2>{name}</h2>
-        <img src={image} />
-        <h4>{price}</h4>
+        <img src={`../${image}`} />
+        <h4>${price / 100}</h4>
         <p>{description}</p>
 
         <button type="submit" onClick={this.handleClick}>
