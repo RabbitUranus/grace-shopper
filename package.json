@@ -59,6 +59,7 @@
     "redux-thunk": "^2.3.0",
     "sequelize": "^4.38.0",
     "socket.io": "^2.1.1",
+    "travis": "^0.1.1",
     "webpack": "^4.28.1"
   },
   "devDependencies": {
