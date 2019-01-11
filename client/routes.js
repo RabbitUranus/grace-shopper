@@ -2,16 +2,10 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {withRouter, Route, Switch} from 'react-router-dom';
 import PropTypes from 'prop-types';
-import {
-  Login,
-  Signup,
-  UserHome,
-  Navbar,
-  AllProducts,
-  SingleItemDetail
-} from './components';
+import {Login, Signup, UserHome, Navbar, AllProducts} from './components';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
+import SingleItemDetail from './components/SingleItemDetail';
 import {me} from './store';
 
 /**
@@ -71,12 +65,7 @@ const mapDispatch = dispatch => {
 
 // The `withRouter` wrapper makes sure that updates are not blocked
 // when the url changes
-export default withRouter(
-  connect(
-    mapState,
-    mapDispatch
-  )(Routes)
-);
+export default withRouter(connect(mapState, mapDispatch)(Routes));
 
 /**
  * PROP TYPES
