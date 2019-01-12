@@ -1,28 +1,29 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {fetchItem} from '../reducers/item';
+import {fetchProduct} from '../reducers/cart';
 
 export class SingleItemDetail extends Component {
   constructor(props) {
     super(props);
     this.state = {};
     this.id = +this.props.match.params.id;
-    console.log('SID props', this.props);
     this.handleClick = this.handleClick.bind(this);
+    this.addCart = this.addCart.bind(this);
   }
 
   componentDidMount = () => {
-    console.log('in componentDidMount');
     this.setState({product: this.props.fetchItem(this.id)});
-    console.log(this.state.product);
   };
 
   handleClick() {
     this.props.fetchItem(this.id);
   }
+  addCart() {
+    this.props.fetchProduct(this.id);
+  }
 
   render() {
-    console.log('SingleItemDetail', this.props, this.id);
     const {name, description, image, price} = this.props.item.item;
     return (
       <div>
@@ -31,7 +32,7 @@ export class SingleItemDetail extends Component {
         <h4>${price / 100}</h4>
         <p>{description}</p>
 
-        <button type="submit" onClick={this.handleClick}>
+        <button type="submit" onClick={this.addCart}>
           Add to Cart
         </button>
       </div>
@@ -46,7 +47,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchItem: id => dispatch(fetchItem(id))
+  fetchItem: id => dispatch(fetchItem(id)),
+  fetchProduct: id => dispatch(fetchProduct(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SingleItemDetail);
