@@ -19,7 +19,7 @@ export class Checkout extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleSubmit() {
-    this.props.sendOrder(this.props.cart);
+    this.props.sendOrder({orders: this.props.cart, user: this.props.user});
     this.setState({isComplete: !this.state.isComplete});
   }
   loginRedirect() {
