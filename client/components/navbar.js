@@ -7,7 +7,7 @@ import {logout} from '../store';
 const Navbar = ({handleClick, isLoggedIn}) => (
   <div className="main_nav_container">
     <Link to="/">
-      <h1>Shiny Objects</h1>
+      <span className="logo_container">Shiny Objects</span>
     </Link>
     <nav>
       {isLoggedIn ? (
