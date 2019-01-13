@@ -10,11 +10,11 @@ export class SingleProduct extends Component {
   }
   handleClick() {
     this.props.fetchProduct(this.props.product.id);
-    console.log('cart contains:', this.props.cart);
+    // console.log('cart contains:', this.props.cart);
   }
 
   render() {
-    console.log('SingleProduct', this.props);
+    // console.log('SingleProduct', this.props);
     const {name, description, image, price, id} = this.props.product;
     return (
       <div>
@@ -46,4 +46,7 @@ const mapDispatchToProps = dispatch => ({
   fetchProduct: id => dispatch(fetchProduct(id))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(SingleProduct);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SingleProduct);
