@@ -46,6 +46,7 @@
     "morgan": "^1.9.1",
     "passport": "^0.3.2",
     "passport-google-oauth": "^1.0.0",
+    "passport-local": "^1.0.0",
     "path": "^0.12.7",
     "pg": "^6.1.2",
     "pg-hstore": "^2.3.2",
@@ -59,8 +60,8 @@
     "redux-thunk": "^2.3.0",
     "sequelize": "^4.38.0",
     "socket.io": "^2.1.1",
-    "travis": "^0.1.1",
     "stripe": "^6.20.0",
+    "travis": "^0.1.1",
     "webpack": "^4.28.1"
   },
   "devDependencies": {
