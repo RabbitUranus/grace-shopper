@@ -21,6 +21,8 @@ const Order = db.define('order', {
   }
 });
 
-Order.hasOne(User);
+User.hasMany(Order);
+// Order.hasOne(User);
+Order.belongsTo(User);
 
 module.exports = Order;
