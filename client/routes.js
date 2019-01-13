@@ -14,6 +14,7 @@ import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import SingleItemDetail from './components/SingleItemDetail';
 import {me} from './store';
+import {MainPage} from './components/MainPage';
 
 /**
  * COMPONENT
@@ -29,6 +30,7 @@ class Routes extends Component {
     return (
       <div>
         <Route path="/" component={Navbar} />
+        <Route exact path="/" component={MainPage} />
         <Switch>
           {/* Routes placed here are available to all visitors */}
           <Route exact path="/login" component={Login} />
@@ -38,14 +40,14 @@ class Routes extends Component {
           <Route exact path="/cart" component={Cart} />
           <Route exact path="/cart/checkout" component={Checkout} />
           <Route exact path="/cart/checkout/thankyou" component={ThankYou} />
-          {isLoggedIn && (
-            <Switch>
-              {/* Routes placed here are only available after logging in */}
-              <Route exact path="/home" component={UserHome} />
-            </Switch>
-          )}
+          {/* {isLoggedIn && ( */}
+          {/* // <Switch> */}
+          {/* Routes placed here are only available after logging in */}
+          {/* <Route exact path="/home" component={UserHome} /> */}
+          {/* </Switch> */}
+          {/* )} */}
           {/* Displays our Login component as a fallback */}
-          <Route component={Login} />
+          {/* <Route component={Login} /> */}
         </Switch>
       </div>
     );

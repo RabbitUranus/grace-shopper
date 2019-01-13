@@ -24,3 +24,40 @@ img {
   width: 10%;
   height: 10%;
 }
+
+/*********************************
+Main Navigation
+*********************************/
+
+.main_nav_container {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo
+*/
+.logo_container {
+  position: relative;
+  top: 50%;
+  left: 15px;
+}
+.logo_container a {
+  font-size: 24px;
+  color: #1e1e27;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.logo_container a span {
+  color: #eac5b3;
+}
+
+/*
+Flex for the main page
+*/
+
+.containerMain {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
