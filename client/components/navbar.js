@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import {logout} from '../store';
 
 const Navbar = ({handleClick, isLoggedIn}) => (
-  <div>
+  <div className="main_nav_container">
     <Link to="/">
       <h1>Shiny Objects</h1>
     </Link>

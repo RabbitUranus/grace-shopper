@@ -24,3 +24,13 @@ img {
   width: 10%;
   height: 10%;
 }
+
+/*********************************
+Main Navigation
+*********************************/
+
+.main_nav_container {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+}
