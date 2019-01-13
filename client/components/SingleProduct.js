@@ -19,7 +19,9 @@ export class SingleProduct extends Component {
     return (
       <div>
         <ul key={id}>
-          <li>{name}</li>
+          <li>
+            <Link to={`/products/${id}`}>{name}</Link>
+          </li>
           <li>{description}</li>
           <Link to={`/products/${id}`}>
             {' '}
