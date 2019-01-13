@@ -40,15 +40,14 @@ Main Navigation
 .logo_container {
   position: relative;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
   left: 15px;
+}
+.logo_container a {
   font-size: 24px;
   color: #1e1e27;
   font-weight: 700;
   text-transform: uppercase;
-  color: #fe4c50;
+}
+.logo_container a span {
+  color: red;
 }
