@@ -66,7 +66,7 @@ describe('Item model', () => {
         name: 'grandfather',
         category: 'cat',
         description: 'lorem ipsum',
-        image: 'blah.png',
+        imageURL: 'blah.png',
         price: 1.1
       });
     }
@@ -84,7 +84,7 @@ describe('Item model', () => {
         name: 'charlie',
         category: 'watch',
         description: 'lorem ipsum',
-        image: 'blahblah.png'
+        imageURL: 'blahblah.png'
       });
     });
 
@@ -107,7 +107,7 @@ describe('Item model', () => {
         name: 'charlie',
         category: 'watch',
         description: 'lorem ipsum',
-        image: 'blahblah.png',
+        imageURL: 'blahblah.png',
         price: -0.01
       });
     });
@@ -128,7 +128,7 @@ describe('Item model', () => {
           name: 'grandfather',
           category: 'watch',
           description: 'lorem ipsum',
-          image: 'blahblahblah.png',
+          imageURL: 'blahblahblah.png',
           price: 1.1
         });
       }
