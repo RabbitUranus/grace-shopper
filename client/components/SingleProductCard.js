@@ -3,18 +3,16 @@ import {connect} from 'react-redux';
 import {fetchProduct} from '../reducers/cart';
 import {Link} from 'react-router-dom';
 
-export class SingleProduct extends Component {
+export class SingleProductCard extends Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
     this.props.fetchProduct(this.props.product.id);
-    // console.log('cart contains:', this.props.cart);
   }
 
   render() {
-    // console.log('SingleProduct', this.props);
     const {name, imageURL, price, id} = this.props.product;
     return (
       <div className="smallImage">
@@ -45,4 +43,4 @@ const mapDispatchToProps = dispatch => ({
   fetchProduct: id => dispatch(fetchProduct(id))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(SingleProduct);
+export default connect(mapStateToProps, mapDispatchToProps)(SingleProductCard);
