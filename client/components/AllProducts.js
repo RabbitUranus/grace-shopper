@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {fetchProducts} from '../reducers/products';
 
-import SingleProduct from './SingleProduct';
+import SingleProductCard from './SingleProductCard';
 
 export class AllProducts extends Component {
   componentDidMount() {
@@ -16,7 +16,7 @@ export class AllProducts extends Component {
         <h1>All Products</h1>
         {this.props.products.length ? (
           products.map(product => (
-            <SingleProduct product={product} key={product.id} />
+            <SingleProductCard product={product} key={product.id} />
           ))
         ) : (
           <div />

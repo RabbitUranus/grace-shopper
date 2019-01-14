@@ -4,7 +4,7 @@ import {expect} from 'chai';
 import React from 'react';
 import enzyme, {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import {SingleProduct} from './SingleProduct';
+import {SingleProductCard} from './SingleProductCard';
 import sinon from 'sinon';
 
 const adapter = new Adapter();
@@ -23,7 +23,7 @@ describe('SingleProduct', () => {
   };
 
   beforeEach(() => {
-    singleProduct = shallow(<SingleProduct product={testItem} />);
+    singleProduct = shallow(<SingleProductCard product={testItem} />);
   });
 
   it('renders each product in an unordered list component', () => {
