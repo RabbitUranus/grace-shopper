@@ -11,7 +11,7 @@ describe('Order routes', () => {
     return db.sync({force: true});
   });
 
-  describe('/api/orders/', () => {
+  xdescribe('/api/orders/', () => {
     beforeEach(() => {
       return Order.create({
         chargeId: '1',

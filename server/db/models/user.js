@@ -32,6 +32,10 @@ const User = db.define('user', {
       return () => this.getDataValue('password');
     }
   },
+  isLoggedIn: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: false
+  },
   isAdmin: {
     type: Sequelize.BOOLEAN,
     defaultValue: false

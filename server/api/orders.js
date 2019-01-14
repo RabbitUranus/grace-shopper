@@ -11,13 +11,23 @@ const router = require('express').Router();
 const {Order} = require('../db/models');
 module.exports = router;
 
+const isAuthorized = (req, res, next) => {
+  if (req.user && req.user.isAdmin === true) {
+    next();
+  } else {
+    res.send(401, 'Unauthorized');
+  }
+};
+
 // GET api/orders/
 router.get('/', async (req, res, next) => {
-  try {
-    const orders = await Order.findAll();
-    res.json(orders);
-  } catch (err) {
-    next(err);
+  if (isAuthorized) {
+    try {
+      const orders = await Order.findAll();
+      res.json(orders);
+    } catch (err) {
+      next(err);
+    }
   }
 });
 
