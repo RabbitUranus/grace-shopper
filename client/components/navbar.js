@@ -8,8 +8,7 @@ const Navbar = ({handleClick, isLoggedIn}) => (
   <div className="main_nav_container">
     <div className="logo_container">
       <Link to="/">
-        Shiny
-        <span>Objects</span>
+        Shiny <span>Objects</span>
       </Link>
     </div>
 
