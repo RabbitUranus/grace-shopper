@@ -30,8 +30,18 @@ export class Checkout extends React.Component {
 
   render() {
     const {cart, user} = this.props;
+
+    const arrayOfPrices = this.props.cart.map(el => {
+      return el.price;
+    });
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    const total = arrayOfPrices.reduce(reducer, 0);
+
+    console.log('cart', this.props.cart);
+    console.log('total', total);
+    // const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    // const total = arrayOfPrices.reduce(reducer, 0);
     const isLoggedIn = !!user.id;
-    console.log(isLoggedIn);
 
     return (
       <div>
@@ -51,12 +61,7 @@ export class Checkout extends React.Component {
 
             <label>
               Email:
-              <input
-                name="email"
-                type="text"
-                value={this.state.user.email}
-                // onChange={this.handleInputChange}
-              />
+              <input name="email" type="text" value={this.state.user.email} />
             </label>
 
             <label>
@@ -65,7 +70,6 @@ export class Checkout extends React.Component {
                 name="adress"
                 type="text"
                 value={this.state.user.address}
-                // onChange={this.handleInputChange}
               />
             </label>
           </form>
@@ -76,6 +80,8 @@ export class Checkout extends React.Component {
             <thead>
               <tr>
                 <th>Your order</th>
+                <th>Price</th>
+                <th>Quantity</th>
               </tr>
               {cart &&
                 cart.map(product => (
@@ -83,7 +89,7 @@ export class Checkout extends React.Component {
                     <td>{product.name}</td>
                     <td>{product.price}</td>
                     <td>1</td>
-                    <td>{product.price}</td>
+                    <td>Total: {total}</td>
                   </tr>
                 ))}
 
