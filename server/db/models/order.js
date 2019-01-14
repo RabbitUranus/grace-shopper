@@ -6,9 +6,15 @@ const User = require('./user');
 const Order = db.define('order', {
   chargeId: {
     type: Sequelize.STRING,
-    default: 'No Stripe ID'
+    default: 'Not Charged'
   },
-  amount: {
+
+  isCart: {
+    type: Sequelize.BOOLEAN,
+    default: true
+  },
+
+  total: {
     type: Sequelize.INTEGER,
     allowNull: false,
     validate: {

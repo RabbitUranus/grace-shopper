@@ -40,7 +40,7 @@ router.post('/', async (req, res, next) => {
     let order = req.body;
 
     const charge = await stripe.charges.create({
-      amount: order.amount,
+      amount: order.total,
       currency: 'usd',
       source: 'tok_visa'
     });
