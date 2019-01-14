@@ -93,21 +93,14 @@ export class Checkout extends React.Component {
                 ))}
 
               {!isLoggedIn ? (
-                <div>
-                  <tr>
-                    <th>
-                      <button onClick={this.handleSubmit}>
-                        Checkout as Guest
-                      </button>
-                      <button onClick={this.loginRedirect}>Log in</button>
-                    </th>
-                  </tr>
-                  <tr>
-                    <th>
-                      <button onClick={this.handleSubmit}>Complete</button>
-                    </th>
-                  </tr>
-                </div>
+                <tr>
+                  <th>
+                    <button onClick={this.handleSubmit}>
+                      Checkout as Guest
+                    </button>
+                    <button onClick={this.loginRedirect}>Log in</button>
+                  </th>
+                </tr>
               ) : (
                 <tr>
                   <th>
