@@ -24,11 +24,11 @@ export class SingleItemDetail extends Component {
   }
 
   render() {
-    const {name, description, image, price} = this.props.item.item;
+    const {name, description, imageURL, price} = this.props.item.item;
     return (
       <div className="detailedImage">
         <h2>{name}</h2>
-        <img src={`../${image}`} />
+        <img src={imageURL} />
         <h4>${price / 100}</h4>
         <p>{description}</p>
 
@@ -51,7 +51,4 @@ const mapDispatchToProps = dispatch => ({
   fetchProduct: id => dispatch(fetchProduct(id))
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SingleItemDetail);
+export default connect(mapStateToProps, mapDispatchToProps)(SingleItemDetail);
