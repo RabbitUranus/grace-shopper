@@ -13,7 +13,8 @@ export class Checkout extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isComplete: false
+      isComplete: false,
+      user: this.props.user
     };
     this.loginRedirect = this.loginRedirect.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,30 +27,53 @@ export class Checkout extends React.Component {
     let path = `login`;
     this.props.history.push(path);
   }
+
   render() {
     const {cart, user} = this.props;
-    const isLoggedIn = !!user.id; // This must be linked to the state
+    const isLoggedIn = !!user.id;
     console.log(isLoggedIn);
+
     return (
       <div>
         {!this.state.isComplete && (
+          <form>
+            <label>Personal Information:</label>
+            <br />
+            <label>
+              Full Name:
+              <input
+                name="fullName"
+                type="text"
+                value={this.state.user.name}
+                // onChange={this.handleInputChange}
+              />
+            </label>
+
+            <label>
+              Email:
+              <input
+                name="email"
+                type="text"
+                value={this.state.user.email}
+                // onChange={this.handleInputChange}
+              />
+            </label>
+
+            <label>
+              Address:
+              <input
+                name="adress"
+                type="text"
+                value={this.state.user.address}
+                // onChange={this.handleInputChange}
+              />
+            </label>
+          </form>
+        )}
+
+        {!this.state.isComplete && (
           <table>
             <thead>
-              <tr>
-                <th>Personal Information</th>
-              </tr>
-              <tr>
-                <td>Name: {user.name}</td>
-              </tr>
-              <tr>
-                <td>Email: {user.email}</td>
-              </tr>
-              <tr>
-                <th>Shipping and Billing Address</th>
-              </tr>
-              <tr>
-                <td>Address: {user.address}</td>
-              </tr>
               <tr>
                 <th>Your order</th>
               </tr>
@@ -63,18 +87,21 @@ export class Checkout extends React.Component {
                   </tr>
                 ))}
 
-              {!isLoggedIn && (
+              {!isLoggedIn ? (
                 <tr>
                   <th>
-                    <button>Checkout as Guest</button>
+                    <button onClick={this.handleSubmit}>
+                      Checkout as Guest using Stripe
+                    </button>
                     <button onClick={this.loginRedirect}>Log in</button>
                   </th>
                 </tr>
-              )}
-              {isLoggedIn && (
+              ) : (
                 <tr>
                   <th>
-                    <button onClick={this.handleSubmit}>Complete</button>
+                    <button onClick={this.handleSubmit}>
+                      Complete with Stripe
+                    </button>
                   </th>
                 </tr>
               )}
