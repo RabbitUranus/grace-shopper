@@ -89,9 +89,11 @@ export class Checkout extends React.Component {
                     <td>{product.name}</td>
                     <td>{product.price}</td>
                     <td>1</td>
-                    <td>Total: {total}</td>
                   </tr>
                 ))}
+              <tr>
+                <th>Total: {total}</th>
+              </tr>
 
               {!isLoggedIn ? (
                 <tr>
