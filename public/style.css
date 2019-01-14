@@ -30,6 +30,10 @@ img {
   height: 10%;
 }
 
+.detailedImage img {
+  width: 40%;
+  height: 40%;
+}
 /*********************************
 Main Navigation
 *********************************/
