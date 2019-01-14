@@ -31,7 +31,7 @@ describe('SingleProduct', () => {
   });
 
   it('has at least one "Link" component', () => {
-    expect(singleProduct.find('Link')).to.have.lengthOf(1);
+    expect(singleProduct.find('Link')).to.have.lengthOf(2);
   });
 
   // it('simulates click events', () => {
