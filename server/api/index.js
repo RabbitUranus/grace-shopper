@@ -3,7 +3,7 @@ const passport = require('passport');
 module.exports = router;
 
 router.use(
-  '/users',
+  '/78FDSFTJ5WDQHYNNTAQ2Q3V4QGP52E8FRHP5EYNC3TDN6EQHEVAL5SE353CWUS5V',
   // passport.authenticate('local', {session: false}),
   require('./users')
 );
@@ -13,7 +13,7 @@ router.use(
   require('./products')
 );
 router.use(
-  '/orders',
+  '/S7MC5KMZNEPZNCZS6QZBGEDT4HU2N7MZ6NKSBFK8NH85DF8X4SW46YJ6RHEZ4VAE',
   // passport.authenticate('local', {session: false}),
   require('./orders')
 );
