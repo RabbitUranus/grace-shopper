@@ -18,6 +18,12 @@ export class Cart extends React.Component {
 
   render() {
     const {cart} = this.props;
+    const arrayOfPrices = this.props.cart.map(el => {
+      return el.price;
+    });
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    const total = arrayOfPrices.reduce(reducer, 0);
+
     return (
       <table>
         <thead>
@@ -33,9 +39,11 @@ export class Cart extends React.Component {
                 <th>{product.name}</th>
                 <th>{product.price}</th>
                 <th>1</th>
-                <th>{product.price}</th>
               </tr>
             ))}
+          <tr>
+            <th>Total: {total}</th>
+          </tr>
           <tr>
             <th>
               <button onClick={this.homeRedirect}>Continue shopping</button>
