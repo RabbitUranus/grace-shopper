@@ -17,7 +17,7 @@ export class SingleProduct extends Component {
     // console.log('SingleProduct', this.props);
     const {name, description, image, price, id} = this.props.product;
     return (
-      <div>
+      <div className="smallImage">
         <ul key={id}>
           <li>
             <Link to={`/products/${id}`}>{name}</Link>
@@ -45,4 +45,7 @@ const mapDispatchToProps = dispatch => ({
   fetchProduct: id => dispatch(fetchProduct(id))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(SingleProduct);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SingleProduct);

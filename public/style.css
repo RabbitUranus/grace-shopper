@@ -21,10 +21,19 @@ form div {
 }
 
 img {
+  width: 90%;
+  height: 90%;
+}
+
+.smallImage img {
   width: 10%;
   height: 10%;
 }
 
+.detailedImage img {
+  width: 40%;
+  height: 40%;
+}
 /*********************************
 Main Navigation
 *********************************/
@@ -57,7 +66,21 @@ Flex for the main page
 */
 
 .containerMain {
+  margin: 4%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+}
+
+.categoryRow {
+  height: 10%;
+  width: 25%;
+  padding: 2%;
+  text-align: center;
+}
+
+.mainImage {
+  height: 2%;
+  width: 100%;
+  display: flex;
 }
