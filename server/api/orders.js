@@ -21,7 +21,8 @@ const isAuthorized = (req, res, next) => {
 
 // GET api/orders/
 router.get('/', async (req, res, next) => {
-  if (isAuthorized) {
+  console.log('before isAuthorized', req.user);
+  if (isAuthorized(req, res, next)) {
     try {
       const orders = await Order.findAll();
       res.json(orders);
