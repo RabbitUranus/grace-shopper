@@ -11,24 +11,26 @@ const router = require('express').Router();
 const {Order} = require('../db/models');
 module.exports = router;
 
-const isAuthorized = (req, res, next) => {
-  if (req.user && req.user.isAdmin === true) {
-    next();
-  } else {
-    res.send(401, 'Unauthorized');
-  }
-};
+// const isAuthorized = (req, res, next) => {
+//   if (req.user && req.user.isAdmin === true) {
+//     next(req, res, next);
+//   } else {
+//     res.send(401, 'Unauthorized');
+//   }
+// };
 
 // GET api/orders/
 router.get('/', async (req, res, next) => {
-  console.log('before isAuthorized', req.user);
-  if (isAuthorized(req, res, next)) {
+  if (req.user.isAdmin) {
     try {
       const orders = await Order.findAll();
       res.json(orders);
     } catch (err) {
       next(err);
     }
+  } else {
+    console.log('in the else');
+    next();
   }
 });
 
