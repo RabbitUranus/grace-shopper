@@ -31,7 +31,7 @@ export const sendOrder = ({orders, user}) => async dispatch => {
   const total = arrayOfPrices.reduce(reducer, 0);
 
   const reqBody = {
-    total,
+    //total,
     items: arrayOfIds,
     userId: user.id
   };

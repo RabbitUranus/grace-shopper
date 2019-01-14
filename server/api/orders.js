@@ -38,6 +38,11 @@ router.get('/', async (req, res, next) => {
 router.post('/', async (req, res, next) => {
   try {
     let order = req.body;
+    order.total = 100;
+
+    const response = await Order.create(order);
+    //console.log(response);
+    const test = await response.getTotal();
 
     const charge = await stripe.charges.create({
       amount: order.total,
@@ -46,7 +51,8 @@ router.post('/', async (req, res, next) => {
     });
     order.chargeId = charge.id;
 
-    const response = await Order.create(order);
+    //change to an update
+
     res.status(201).json(response);
   } catch (err) {
     next(err);
