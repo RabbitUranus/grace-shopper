@@ -22,7 +22,6 @@ export class SingleProduct extends Component {
           <li>
             <Link to={`/products/${id}`}>{name}</Link>
           </li>
-          <li>{description}</li>
           <Link to={`/products/${id}`}>
             {' '}
             <img src={image} />{' '}
@@ -46,7 +45,4 @@ const mapDispatchToProps = dispatch => ({
   fetchProduct: id => dispatch(fetchProduct(id))
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SingleProduct);
+export default connect(mapStateToProps, mapDispatchToProps)(SingleProduct);
