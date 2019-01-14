@@ -35,7 +35,7 @@ export class Checkout extends React.Component {
 
   render() {
     const {cart, user} = this.props;
-    const isLoggedIn = !!user.id; // This must be linked to the state
+    const isLoggedIn = !!user.id;
     console.log(isLoggedIn);
 
     return (
@@ -92,17 +92,23 @@ export class Checkout extends React.Component {
                   </tr>
                 ))}
 
-              {!isLoggedIn && (
-                <tr>
-                  <th>
-                    <button onClick={this.guestRedirect}>
-                      Checkout as Guest
-                    </button>
-                    <button onClick={this.loginRedirect}>Log in</button>
-                  </th>
-                </tr>
-              )}
-              {isLoggedIn && (
+              {!isLoggedIn ? (
+                <div>
+                  <tr>
+                    <th>
+                      <button onClick={this.handleSubmit}>
+                        Checkout as Guest
+                      </button>
+                      <button onClick={this.loginRedirect}>Log in</button>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th>
+                      <button onClick={this.handleSubmit}>Complete</button>
+                    </th>
+                  </tr>
+                </div>
+              ) : (
                 <tr>
                   <th>
                     <button onClick={this.handleSubmit}>Complete</button>
