@@ -66,6 +66,7 @@ Flex for the main page
 */
 
 .containerMain {
+  margin: 4%;
   display: flex;
   flex-direction: row;
   /* flex-wrap: wrap; */
