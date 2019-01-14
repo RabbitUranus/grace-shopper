@@ -63,27 +63,22 @@ export class Checkout extends React.Component {
                 onChange={this.handleInputChange}
               />
             </label>
+
+            <label>
+              Address:
+              <input
+                name="adress"
+                type="text"
+                value={this.state.user.address}
+                onChange={this.handleInputChange}
+              />
+            </label>
           </form>
         )}
 
         {!this.state.isComplete && (
           <table>
             <thead>
-              <tr>
-                <th>Personal Information</th>
-              </tr>
-              <tr>
-                <td>Name: {user.name}</td>
-              </tr>
-              <tr>
-                <td>Email: {user.email}</td>
-              </tr>
-              <tr>
-                <th>Shipping and Billing Address</th>
-              </tr>
-              <tr>
-                <td>Address: {user.address || '5 Hanover Sq. New York, NY'}</td>
-              </tr>
               <tr>
                 <th>Your order</th>
               </tr>
