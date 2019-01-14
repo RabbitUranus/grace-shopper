@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {fetchItem} from '../reducers/item';
 import {fetchProduct} from '../reducers/cart';
 import {displayPrice} from '../utils/utilities';
+import {addToCart} from '../reducers/cart';
 
 export class SingleItemDetail extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ export class SingleItemDetail extends Component {
     this.props.fetchItem(this.id);
   }
   addCart() {
-    this.props.fetchProduct(this.id);
+    this.props.addToCart(this.id);
   }
 
   render() {
@@ -49,7 +50,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchItem: id => dispatch(fetchItem(id)),
-  fetchProduct: id => dispatch(fetchProduct(id))
+  addToCart: id => dispatch(addToCart(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SingleItemDetail);

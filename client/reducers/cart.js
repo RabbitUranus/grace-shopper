@@ -14,7 +14,7 @@ export const submitOrder = () => ({
 });
 
 //THUNK CREATOR
-export const fetchProduct = id => async dispatch => {
+export const addToCart = id => async dispatch => {
   const {data} = await axios.get(`/api/products/${id}`);
   const action = addProduct(data);
   dispatch(action);
@@ -24,14 +24,8 @@ export const sendOrder = ({orders, user}) => async dispatch => {
   const arrayOfIds = orders.map(el => {
     return el.id;
   });
-  const arrayOfPrices = orders.map(el => {
-    return el.price;
-  });
-  const reducer = (accumulator, currentValue) => accumulator + currentValue;
-  const total = arrayOfPrices.reduce(reducer, 0);
 
   const reqBody = {
-    total,
     items: arrayOfIds,
     userId: user.id
   };

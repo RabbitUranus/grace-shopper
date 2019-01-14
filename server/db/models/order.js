@@ -6,12 +6,12 @@ const User = require('./user');
 const Order = db.define('order', {
   chargeId: {
     type: Sequelize.STRING,
-    default: 'Not Charged'
+    defaultValue: 'Not Charged'
   },
 
   isCart: {
     type: Sequelize.BOOLEAN,
-    default: true
+    defaultValue: true
   },
 
   total: {
@@ -27,8 +27,20 @@ const Order = db.define('order', {
   }
 });
 
+Order.prototype.getTotal = async function() {
+  const arrayOfItems = await Promise.all(
+    this.items.map(async element => {
+      return Item.findById(element);
+    })
+  );
+  const total = arrayOfItems.reduce(
+    (accumulator, currentValue) => accumulator + currentValue.price,
+    0
+  );
+  return total;
+};
+
 User.hasMany(Order);
-// Order.hasOne(User);
 Order.belongsTo(User);
 
 module.exports = Order;
