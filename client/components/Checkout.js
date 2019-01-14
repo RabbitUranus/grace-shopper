@@ -18,7 +18,6 @@ export class Checkout extends React.Component {
     };
     this.loginRedirect = this.loginRedirect.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.guestRedirect = this.guestRedirect.bind(this);
   }
   handleSubmit() {
     this.props.sendOrder({orders: this.props.cart, user: this.props.user});
@@ -26,10 +25,6 @@ export class Checkout extends React.Component {
   }
   loginRedirect() {
     let path = `login`;
-    this.props.history.push(path);
-  }
-  guestRedirect() {
-    let path = 'checkout-as-guest';
     this.props.history.push(path);
   }
 
@@ -50,7 +45,7 @@ export class Checkout extends React.Component {
                 name="fullName"
                 type="text"
                 value={this.state.user.name}
-                onChange={this.handleInputChange}
+                // onChange={this.handleInputChange}
               />
             </label>
 
@@ -60,7 +55,7 @@ export class Checkout extends React.Component {
                 name="email"
                 type="text"
                 value={this.state.user.email}
-                onChange={this.handleInputChange}
+                // onChange={this.handleInputChange}
               />
             </label>
 
@@ -70,7 +65,7 @@ export class Checkout extends React.Component {
                 name="adress"
                 type="text"
                 value={this.state.user.address}
-                onChange={this.handleInputChange}
+                // onChange={this.handleInputChange}
               />
             </label>
           </form>
@@ -96,7 +91,7 @@ export class Checkout extends React.Component {
                 <tr>
                   <th>
                     <button onClick={this.handleSubmit}>
-                      Checkout as Guest
+                      Checkout as Guest using Stripe
                     </button>
                     <button onClick={this.loginRedirect}>Log in</button>
                   </th>
@@ -104,7 +99,9 @@ export class Checkout extends React.Component {
               ) : (
                 <tr>
                   <th>
-                    <button onClick={this.handleSubmit}>Complete</button>
+                    <button onClick={this.handleSubmit}>
+                      Complete with Stripe
+                    </button>
                   </th>
                 </tr>
               )}
