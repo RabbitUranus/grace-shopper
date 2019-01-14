@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import {displayPrice} from '../utils/utilities';
 
 export class Cart extends React.Component {
   constructor(props) {
@@ -36,12 +37,12 @@ export class Cart extends React.Component {
             cart.map(product => (
               <tr key={product.id}>
                 <td>{product.name}</td>
-                <td>{product.price}</td>
+                <td>{displayPrice(product.price)}</td>
                 <td>1</td>
               </tr>
             ))}
           <tr>
-            <th>Total: {total}</th>
+            <th>Total: {displayPrice(total)}</th>
           </tr>
           <tr>
             <th>
@@ -61,7 +62,4 @@ const mapStateToProps = state => ({
   cart: state.cart.cart
 });
 
-export default connect(
-  mapStateToProps,
-  null
-)(Cart);
+export default connect(mapStateToProps, null)(Cart);

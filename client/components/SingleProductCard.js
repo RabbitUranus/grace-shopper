@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {addToCart} from '../reducers/cart';
 import {Link} from 'react-router-dom';
+import {displayPrice} from '../utils/utilities';
 
 export class SingleProductCard extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ export class SingleProductCard extends Component {
             {' '}
             <img src={imageURL} />{' '}
           </Link>
-          <li>${price / 100}</li>
+          <li>{displayPrice(price)}</li>
         </ul>
         <button type="submit" onClick={this.handleClick}>
           Add to Cart

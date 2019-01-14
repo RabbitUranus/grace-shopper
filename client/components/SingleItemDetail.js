@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {fetchItem} from '../reducers/item';
+import {fetchProduct} from '../reducers/cart';
+import {displayPrice} from '../utils/utilities';
 import {addToCart} from '../reducers/cart';
 
 export class SingleItemDetail extends Component {
@@ -29,7 +31,7 @@ export class SingleItemDetail extends Component {
       <div className="detailedImage">
         <h2>{name}</h2>
         <img src={imageURL} />
-        <h4>${price / 100}</h4>
+        <h4>{displayPrice(price)}</h4>
         <p>{description}</p>
 
         <button type="submit" onClick={this.addCart}>
