@@ -37,12 +37,8 @@ router.get('/', async (req, res, next) => {
 //POST api/orders
 router.post('/', async (req, res, next) => {
   try {
-    let order = req.body;
-    order.total = 100;
-
-    const response = await Order.create(order);
-    //console.log(response);
-    const test = await response.getTotal();
+    const order = Order.build({userId: req.body.userId, items: req.body.items});
+    order.total = await order.getTotal();
 
     const charge = await stripe.charges.create({
       amount: order.total,
@@ -50,10 +46,8 @@ router.post('/', async (req, res, next) => {
       source: 'tok_visa'
     });
     order.chargeId = charge.id;
-
-    //change to an update
-
-    res.status(201).json(response);
+    const submittedOrder = await order.save();
+    res.status(201).json(submittedOrder);
   } catch (err) {
     next(err);
   }
