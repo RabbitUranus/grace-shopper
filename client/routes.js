@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {withRouter, Route, Switch} from 'react-router-dom';
+import {withRouter, Route, Switch, Redirect} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {
   Login,
@@ -29,6 +29,7 @@ class Routes extends Component {
 
     return (
       <div>
+        {/* <Route path="/api/*" render={() => <Redirect to="/" />} /> */}
         <Route path="/" component={Navbar} />
         <Route exact path="/" component={MainPage} />
         <Switch>
@@ -76,12 +77,7 @@ const mapDispatch = dispatch => {
 
 // The `withRouter` wrapper makes sure that updates are not blocked
 // when the url changes
-export default withRouter(
-  connect(
-    mapState,
-    mapDispatch
-  )(Routes)
-);
+export default withRouter(connect(mapState, mapDispatch)(Routes));
 
 /**
  * PROP TYPES

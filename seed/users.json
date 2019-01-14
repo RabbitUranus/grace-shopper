@@ -90,6 +90,14 @@
       "address": "135 Main Street, Anytown, NY 12345",
       "email": "yankee@zulu.com",
       "password": "thisIsAPassword"
+    },
+    {
+      "name": "Wolfram Tungsten",
+      "phone": "5555555568",
+      "address": "136 Main Street, Anytown, NY 12345",
+      "email": "wolfram@tungsten.com",
+      "password": "1810-GH-cohort",
+      "isAdmin": true
     }
   ]
 }
