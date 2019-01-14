@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {sendOrder} from '../reducers/cart';
 import ThankYou from './ThankYou';
+import {displayPrice} from '../utils/utilities';
 
 const dummyData = {
   name: 'Able Baker',
@@ -50,22 +51,18 @@ export class Checkout extends React.Component {
             <label>Personal Information:</label>
             <br />
             <label>
-              Full Name:
-              <input
-                name="fullName"
-                type="text"
-                value={this.state.user.name}
-                // onChange={this.handleInputChange}
-              />
+              Full Name:{' '}
+              <input name="fullName" type="text" value={this.state.user.name} />
+              {/* onChange={this.handleInputChange} */}
             </label>
 
             <label>
-              Email:
+              Email:{' '}
               <input name="email" type="text" value={this.state.user.email} />
             </label>
 
             <label>
-              Address:
+              Address:{' '}
               <input
                 name="adress"
                 type="text"
@@ -87,12 +84,12 @@ export class Checkout extends React.Component {
                 cart.map(product => (
                   <tr key={product.id}>
                     <td>{product.name}</td>
-                    <td>{product.price}</td>
+                    <td>{displayPrice(product.price)}</td>
                     <td>1</td>
                   </tr>
                 ))}
               <tr>
-                <th>Total: {total}</th>
+                <th>Total: {displayPrice(total)}</th>
               </tr>
 
               {!isLoggedIn ? (
@@ -131,7 +128,4 @@ const mapDispatchToProps = dispatch => ({
   sendOrder: order => dispatch(sendOrder(order))
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Checkout);
+export default connect(mapStateToProps, mapDispatchToProps)(Checkout);
