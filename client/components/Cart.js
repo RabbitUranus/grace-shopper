@@ -31,14 +31,13 @@ export class Cart extends React.Component {
             <th>Items</th>
             <th>Price</th>
             <th>Quantity</th>
-            <th>Total</th>
           </tr>
           {cart &&
             cart.map(product => (
               <tr key={product.id}>
-                <th>{product.name}</th>
-                <th>{product.price}</th>
-                <th>1</th>
+                <td>{product.name}</td>
+                <td>{product.price}</td>
+                <td>1</td>
               </tr>
             ))}
           <tr>
