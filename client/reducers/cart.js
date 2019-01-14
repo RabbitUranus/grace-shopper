@@ -14,7 +14,7 @@ export const submitOrder = () => ({
 });
 
 //THUNK CREATOR
-export const fetchProduct = id => async dispatch => {
+export const addToCart = id => async dispatch => {
   const {data} = await axios.get(`/api/products/${id}`);
   const action = addProduct(data);
   dispatch(action);

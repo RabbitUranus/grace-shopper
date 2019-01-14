@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {fetchProduct} from '../reducers/cart';
+import {addToCart} from '../reducers/cart';
 import {Link} from 'react-router-dom';
 
 export class SingleProductCard extends Component {
@@ -9,7 +9,7 @@ export class SingleProductCard extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
-    this.props.fetchProduct(this.props.product.id);
+    this.props.addToCart(this.props.product.id);
   }
 
   render() {
@@ -40,7 +40,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchProduct: id => dispatch(fetchProduct(id))
+  addToCart: id => dispatch(addToCart(id))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SingleProductCard);
