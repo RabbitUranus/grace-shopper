@@ -13,10 +13,12 @@ export class Checkout extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isComplete: false
+      isComplete: false,
+      user: this.props.user
     };
     this.loginRedirect = this.loginRedirect.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.guestRedirect = this.guestRedirect.bind(this);
   }
   handleSubmit() {
     this.props.sendOrder({orders: this.props.cart, user: this.props.user});
@@ -26,12 +28,44 @@ export class Checkout extends React.Component {
     let path = `login`;
     this.props.history.push(path);
   }
+  guestRedirect() {
+    let path = 'checkout-as-guest';
+    this.props.history.push(path);
+  }
+
   render() {
     const {cart, user} = this.props;
     const isLoggedIn = !!user.id; // This must be linked to the state
     console.log(isLoggedIn);
+
     return (
       <div>
+        {!this.state.isComplete && (
+          <form>
+            <label>Personal Information:</label>
+            <br />
+            <label>
+              Full Name:
+              <input
+                name="fullName"
+                type="text"
+                value={this.state.user.name}
+                onChange={this.handleInputChange}
+              />
+            </label>
+
+            <label>
+              Email:
+              <input
+                name="email"
+                type="text"
+                value={this.state.user.email}
+                onChange={this.handleInputChange}
+              />
+            </label>
+          </form>
+        )}
+
         {!this.state.isComplete && (
           <table>
             <thead>
@@ -48,7 +82,7 @@ export class Checkout extends React.Component {
                 <th>Shipping and Billing Address</th>
               </tr>
               <tr>
-                <td>Address: {user.address}</td>
+                <td>Address: {user.address || '5 Hanover Sq. New York, NY'}</td>
               </tr>
               <tr>
                 <th>Your order</th>
@@ -66,7 +100,9 @@ export class Checkout extends React.Component {
               {!isLoggedIn && (
                 <tr>
                   <th>
-                    <button>Checkout as Guest</button>
+                    <button onClick={this.guestRedirect}>
+                      Checkout as Guest
+                    </button>
                     <button onClick={this.loginRedirect}>Log in</button>
                   </th>
                 </tr>
