@@ -19,7 +19,7 @@ export class Checkout extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleSubmit() {
-    this.props.sendOrder(this.props.cart);
+    this.props.sendOrder({orders: this.props.cart, user: this.props.user});
     this.setState({isComplete: !this.state.isComplete});
   }
   loginRedirect() {
@@ -27,8 +27,9 @@ export class Checkout extends React.Component {
     this.props.history.push(path);
   }
   render() {
-    const {cart} = this.props;
-    const isLoggedIn = false; // This must be linked to the state
+    const {cart, user} = this.props;
+    const isLoggedIn = !!user.id; // This must be linked to the state
+    console.log(isLoggedIn);
     return (
       <div>
         {!this.state.isComplete && (
@@ -36,11 +37,18 @@ export class Checkout extends React.Component {
             <thead>
               <tr>
                 <th>Personal Information</th>
-                <th>{dummyData.name}</th>
+              </tr>
+              <tr>
+                <td>Name: {user.name}</td>
+              </tr>
+              <tr>
+                <td>Email: {user.email}</td>
               </tr>
               <tr>
                 <th>Shipping and Billing Address</th>
-                <th>{dummyData.address}</th>
+              </tr>
+              <tr>
+                <td>Address: {user.address}</td>
               </tr>
               <tr>
                 <th>Your order</th>
@@ -48,14 +56,14 @@ export class Checkout extends React.Component {
               {cart &&
                 cart.map(product => (
                   <tr key={product.id}>
-                    <th>{product.name}</th>
-                    <th>{product.price}</th>
-                    <th>1</th>
-                    <th>{product.price}</th>
+                    <td>{product.name}</td>
+                    <td>{product.price}</td>
+                    <td>1</td>
+                    <td>{product.price}</td>
                   </tr>
                 ))}
 
-              {isLoggedIn && (
+              {!isLoggedIn && (
                 <tr>
                   <th>
                     <button>Checkout as Guest</button>
@@ -63,7 +71,7 @@ export class Checkout extends React.Component {
                   </th>
                 </tr>
               )}
-              {!isLoggedIn && (
+              {isLoggedIn && (
                 <tr>
                   <th>
                     <button onClick={this.handleSubmit}>Complete</button>
@@ -80,7 +88,8 @@ export class Checkout extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  cart: state.cart.cart
+  cart: state.cart.cart,
+  user: state.user
 });
 
 const mapDispatchToProps = dispatch => ({

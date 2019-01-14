@@ -19,7 +19,8 @@ export const fetchProduct = id => async dispatch => {
   const action = addProduct(data);
   dispatch(action);
 };
-export const sendOrder = orders => async dispatch => {
+
+export const sendOrder = ({orders, user}) => async dispatch => {
   const arrayOfIds = orders.map(el => {
     return el.id;
   });
@@ -32,7 +33,8 @@ export const sendOrder = orders => async dispatch => {
   const reqBody = {
     amount: total,
     chargeId: 'test',
-    items: arrayOfIds
+    items: arrayOfIds,
+    userId: user.id
   };
 
   await axios.post('/api/orders', reqBody);
