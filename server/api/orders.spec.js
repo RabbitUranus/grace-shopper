@@ -8,21 +8,18 @@ const Order = db.model('order');
 
 describe('Order routes', () => {
   beforeEach(() => {
-    return db.sync({force: true});
+    // return db.sync({force: true});
   });
 
-  xdescribe('/api/orders/', () => {
-    beforeEach(() => {
-      return Order.create({
-        chargeId: '1',
-        amount: 500,
-        items: [1, 2]
-      });
+  describe('/api/orders/', () => {
+    beforeEach(done => {
+      done();
     });
 
-    it('GET /api/orders', async () => {
+    xit('GET /api/orders', async () => {
       const res = await request(app)
         .get('/api/orders')
+        .set('user', 'isAdmin: true')
         .expect(200);
 
       expect(res.body).to.be.an('array');
