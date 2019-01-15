@@ -106,11 +106,17 @@ export class Checkout extends React.Component {
                 {!isLoggedIn ? (
                   <tr>
                     <th>
-                      <button onClick={this.handleSubmit}>
+                      <button
+                        type="button"
+                        className="btn btn-outline-info"
+                        onClick={this.handleSubmit}
+                      >
                         Checkout as Guest using Stripe
                       </button>
                       <Link to="/login">
-                        <button>Log in</button>
+                        <button type="button" className="btn btn-outline-info">
+                          Log in
+                        </button>
                       </Link>
                     </th>
                   </tr>
