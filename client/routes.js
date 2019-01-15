@@ -15,6 +15,7 @@ import Checkout from './components/Checkout';
 import SingleItemDetail from './components/SingleItemDetail';
 import {me} from './store';
 import {MainPage} from './components/MainPage';
+import Category from './components/Category';
 
 /**
  * COMPONENT
