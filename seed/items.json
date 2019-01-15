@@ -1,50 +1,56 @@
 {
   "items": [
     {
-      "name": "A ring",
+      "name": "Birthstone Stacking Ring",
       "category": "ring",
       "price": 10000,
-      "description": "Cool ring",
+      "description":
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.",
       "imageURL": "/images/rings/1.jpg",
       "color": "gold"
     },
     {
-      "name": "Another ring",
+      "name": "David Petite Ring",
       "category": "ring",
       "price": 10000,
-      "description": "Cool ring",
+      "description":
+        "Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis.",
       "imageURL": "/images/rings/2.png",
       "color": "gold"
     },
     {
-      "name": "An interesting ring",
+      "name": "Nadri Zirconia Ring",
       "category": "ring",
       "price": 10000,
-      "description": "Cool ring",
+      "description":
+        "Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.",
       "imageURL": "/images/rings/amber-669479_1280.jpg",
       "color": "gold"
     },
     {
-      "name": "A magic ring",
+      "name": "Lola Coil Ring",
       "category": "ring",
       "price": 10000,
-      "description": "Cool ring",
+      "description":
+        "Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.",
       "imageURL": "/images/rings/diamond-553492_1280.png",
       "color": "gold"
     },
     {
-      "name": "An engagement ring",
+      "name": "Diamond & Stone Ring",
       "category": "ring",
       "price": 10000,
-      "description": "Cool ring",
+      "description":
+        "Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet.",
       "imageURL": "/images/rings/engagement-ring-2093824_1280.jpg",
       "color": "gold"
     },
     {
-      "name": "Some Earrings",
+      "name": "Ear Crawlers Earrings",
       "category": "earrings",
       "price": 15000,
-      "description": "Cool earring",
+      "description":
+        "Vestibulum sapien. Proin quam. Etiam ultrices. Suspendisse in justo eu magna luctus suscipit. Sed lectus. Integer euismod lacus luctus magna.",
       "imageURL": "/images/earrings/accessories-2684884_1280.jpg",
       "color": "silver"
     },
@@ -52,7 +58,8 @@
       "name": "Rose Gold Earrings",
       "category": "earrings",
       "price": 10000,
-      "description": "Cool earring",
+      "description":
+        "Quisque cursus, metus vitae pharetra auctor, sem massa mattis sem, at interdum magna augue eget diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lacinia molestie dui.",
       "imageURL": "/images/earrings/rose-gold-1875469_1280.jpg",
       "color": "red"
     },
@@ -60,7 +67,8 @@
       "name": "Topaz Earrings",
       "category": "earrings",
       "price": 10000,
-      "description": "Cool earring",
+      "description":
+        "Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet.",
       "imageURL": "/images/earrings/topaz-665340_1280.jpg",
       "color": "gold"
     },
@@ -68,16 +76,17 @@
       "name": "Wolf Earrings",
       "category": "earrings",
       "price": 100000,
-      "description": "Cool earring",
+      "description":
+        "Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris. Morbi in dui quis est pulvinar ullamcorper.",
       "imageURL": "/images/earrings/wolf-331722_1280.jpg",
       "color": "black"
     },
     {
-      "imageURL": "/images/watches/pocket-watch-2031021_1280.jpg",
-      "price": 20000,
-      "color": "gold",
       "name": "Large analog pocket watch with visible works",
       "category": "watch",
+      "price": 20000,
+      "imageURL": "/images/watches/pocket-watch-2031021_1280.jpg",
+      "color": "gold",
       "description":
         "Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh. Quisque volutpat condimentum velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
     },
