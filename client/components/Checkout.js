@@ -31,201 +31,212 @@ export class Checkout extends React.Component {
 
     return (
       <div>
-        <div className="checkoutInfoBox">
-          {!this.state.isComplete && (
-            <form>
-              <br />
-              <label className="categoryInfo">Billing Address:</label>
-              <br />
-              <label>
-                Full Name*:
-                <input
-                  name="fullName"
-                  type="text"
-                  value={this.state.user.name}
-                />
-              </label>
+        <div className="checkoutMain">
+          <div className="checkoutInfoBox">
+            {!this.state.isComplete && (
+              <form>
+                <br />
+                <label className="categoryInfo">Billing Address:</label>
+                <br />
+                <label>
+                  Full Name*:
+                  <input
+                    name="fullName"
+                    type="text"
+                    value={this.state.user.name}
+                  />
+                </label>
 
-              <label>
-                Shipping Address 1*:
-                <input
-                  name="address"
-                  type="text"
-                  value={this.state.user.address}
-                />
-              </label>
+                <label>
+                  Shipping Address 1*:
+                  <input
+                    name="address"
+                    type="text"
+                    value={this.state.user.address}
+                  />
+                </label>
 
-              <label>
-                Shipping Address 2:
-                <input name="address" type="text" />
-              </label>
-              <label>
-                City*:
-                <input name="city" type="text" />
-              </label>
-              <label>
-                State*:
-                <input name="address" type="text" />
-              </label>
-              <label>
-                Zip Code*:
-                <input name="address" type="number" />
-              </label>
-              <br />
-            </form>
-          )}
+                <label>
+                  Shipping Address 2:
+                  <input name="address" type="text" />
+                </label>
+                <label>
+                  City*:
+                  <input name="city" type="text" />
+                </label>
+                <label>
+                  State*:
+                  <input name="address" type="text" />
+                </label>
+                <label>
+                  Zip Code*:
+                  <input name="address" type="number" />
+                </label>
+                <br />
+              </form>
+            )}
+          </div>
+
+          <div className="checkoutInfoBox">
+            {!this.state.isComplete && (
+              <form>
+                <br />
+                <label className="categoryInfo">Shipping Address:</label>
+                <br />
+                <label>
+                  Full Name*:
+                  <input
+                    name="fullName"
+                    type="text"
+                    value={this.state.user.name}
+                  />
+                </label>
+
+                <label>
+                  Shipping Address 1*:
+                  <input
+                    name="address"
+                    type="text"
+                    value={this.state.user.address}
+                  />
+                </label>
+
+                <label>
+                  Shipping Address 2:
+                  <input name="address" type="text" />
+                </label>
+                <label>
+                  City*:
+                  <input name="city" type="text" />
+                </label>
+                <label>
+                  State*:
+                  <input name="address" type="text" />
+                </label>
+                <label>
+                  Zip Code*:
+                  <input name="address" type="number" />
+                </label>
+                <br />
+              </form>
+            )}
+          </div>
         </div>
+        <hr />
+        <div className="checkoutMain">
+          <div className="checkoutInfoBox">
+            {!this.state.isComplete && (
+              <form>
+                <br />
+                <label className="categoryInfo">Personal Information:</label>
+                <br />
+                <label>
+                  Full Name:
+                  <input
+                    name="fullName"
+                    type="text"
+                    value={this.state.user.name}
+                  />
+                </label>
 
-        <div className="checkoutInfoBox">
-          {!this.state.isComplete && (
-            <form>
-              <br />
-              <label className="categoryInfo">Shipping Address:</label>
-              <br />
-              <label>
-                Full Name*:
-                <input
-                  name="fullName"
-                  type="text"
-                  value={this.state.user.name}
-                />
-              </label>
+                <label>
+                  Email:
+                  <input
+                    name="email"
+                    type="text"
+                    defaultValue={this.state.user.email}
+                  />
+                </label>
 
-              <label>
-                Shipping Address 1*:
-                <input
-                  name="address"
-                  type="text"
-                  value={this.state.user.address}
-                />
-              </label>
+                <label>
+                  Address:
+                  <input
+                    name="adress"
+                    type="text"
+                    defaultValue={this.state.user.address}
+                  />
+                </label>
+                <br />
+                <label className="categoryInfo">Payment Information:</label>
+                <br />
+                <label>
+                  Credit Card Number:
+                  <input name="creditCard" type="number" />
+                </label>
+                <label>
+                  Card Validation Code (3 or 4 digit number):
+                  <input name="code" type="number" />
+                </label>
+                <label>
+                  Ex. Month:
+                  <input name="exMonth" type="number" />
+                </label>
+                <label>
+                  Ex. Year:
+                  <input name="exYear" type="number" />
+                </label>
+              </form>
+            )}
+          </div>
 
-              <label>
-                Shipping Address 2:
-                <input name="address" type="text" />
-              </label>
-              <label>
-                City*:
-                <input name="city" type="text" />
-              </label>
-              <label>
-                State*:
-                <input name="address" type="text" />
-              </label>
-              <label>
-                Zip Code*:
-                <input name="address" type="number" />
-              </label>
-              <br />
-            </form>
-          )}
-        </div>
-
-        <div className="checkoutInfoBox">
-          {!this.state.isComplete && (
-            <form>
-              <br />
-              <label className="categoryInfo">Personal Information:</label>
-              <br />
-              <label>
-                Full Name:
-                <input
-                  name="fullName"
-                  type="text"
-                  value={this.state.user.name}
-                />
-              </label>
-
-              <label>
-                Email:
-                <input name="email" type="text" value={this.state.user.email} />
-              </label>
-
-              <label>
-                Address:
-                <input
-                  name="adress"
-                  type="text"
-                  value={this.state.user.address}
-                />
-              </label>
-              <br />
-              <label className="categoryInfo">Payment Information:</label>
-              <br />
-              <label>
-                Credit Card Number:
-                <input name="creditCard" type="number" />
-              </label>
-              <label>
-                Card Validation Code (3 or 4 digit number):
-                <input name="code" type="number" />
-              </label>
-              <label>
-                Ex. Month:
-                <input name="exMonth" type="number" />
-              </label>
-              <label>
-                Ex. Year:
-                <input name="exYear" type="number" />
-              </label>
-            </form>
-          )}
-        </div>
-
-        <div className="checkoutInfoBox">
-          {!this.state.isComplete && (
-            <table>
-              <thead>
-                <tr>
-                  <th>Your order</th>
-                  <th>Price</th>
-                  <th>Quantity</th>
-                </tr>
-                {cart &&
-                  cart.map(product => (
-                    <tr key={product.id}>
-                      <td>{product.name}</td>
-                      <td>{displayPrice(product.price)}</td>
-                      <td>1</td>
-                    </tr>
-                  ))}
-                <tr>
-                  <th>Total: {displayPrice(total)}</th>
-                </tr>
-
-                {!isLoggedIn ? (
+          <div className="checkoutInfoBox">
+            {!this.state.isComplete && (
+              <table>
+                <thead>
                   <tr>
-                    <th>
-                      <button
-                        type="button"
-                        className="btn btn-outline-info"
-                        onClick={this.handleSubmit}
-                      >
-                        Checkout as Guest using Stripe
-                      </button>
-                      <Link to="/login">
-                        <button type="button" className="btn btn-outline-info">
-                          Log in
+                    <th>Your order</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                  </tr>
+                  {cart &&
+                    cart.map(product => (
+                      <tr key={product.id}>
+                        <td>{product.name}</td>
+                        <td>{displayPrice(product.price)}</td>
+                        <td>1</td>
+                      </tr>
+                    ))}
+                  <tr>
+                    <th>Total: {displayPrice(total)}</th>
+                  </tr>
+
+                  {!isLoggedIn ? (
+                    <tr>
+                      <th>
+                        <button
+                          type="button"
+                          className="btn btn-outline-info"
+                          onClick={this.handleSubmit}
+                        >
+                          Checkout as Guest using Stripe
                         </button>
-                      </Link>
-                    </th>
-                  </tr>
-                ) : (
-                  <tr>
-                    <th>
-                      <button
-                        type="button"
-                        className="btn btn-outline-info"
-                        onClick={this.handleSubmit}
-                      >
-                        Place the order with Stripe
-                      </button>
-                    </th>
-                  </tr>
-                )}
-              </thead>
-            </table>
-          )}
+                        <Link to="/login">
+                          <button
+                            type="button"
+                            className="btn btn-outline-info"
+                          >
+                            Log in
+                          </button>
+                        </Link>
+                      </th>
+                    </tr>
+                  ) : (
+                    <tr>
+                      <th>
+                        <button
+                          type="button"
+                          className="btn btn-outline-info"
+                          onClick={this.handleSubmit}
+                        >
+                          Place the order with Stripe
+                        </button>
+                      </th>
+                    </tr>
+                  )}
+                </thead>
+              </table>
+            )}
+          </div>
         </div>
         {this.state.isComplete && <ThankYou />}
       </div>
