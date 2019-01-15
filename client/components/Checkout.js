@@ -38,8 +38,6 @@ export class Checkout extends React.Component {
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     const total = arrayOfPrices.reduce(reducer, 0);
 
-    console.log('cart', this.props.cart);
-    console.log('total', total);
     // const reducer = (accumulator, currentValue) => accumulator + currentValue;
     // const total = arrayOfPrices.reduce(reducer, 0);
     const isLoggedIn = !!user.id;
