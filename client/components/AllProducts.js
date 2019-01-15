@@ -7,18 +7,13 @@ import queryString from 'query-string';
 export class AllProducts extends Component {
   componentDidMount() {
     let query;
-    console.log(this.props.location.search);
     const values = queryString.parse(this.props.location.search);
-    console.log('values', values);
     const category = values.category || '';
-    // const category = this.props.match.params.category || '';
-    console.log('category:', category);
     if (!category) {
       query = '';
     } else {
       query = `?category=${category}`;
     }
-    console.log('query:', query);
     this.props.fetchProducts(query);
   }
 
