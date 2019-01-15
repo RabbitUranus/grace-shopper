@@ -171,6 +171,10 @@ td {
 }
 
 /*ThankYou*/
-.thankYouMessage {
+h1.thankYouMessage {
   text-align: center;
+}
+
+h3.thankYouMessage {
+  text-align: left;
 }

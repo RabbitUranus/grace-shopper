@@ -122,7 +122,7 @@ export class Checkout extends React.Component {
             )}
           </div>
         </div>
-        <hr />
+        {!this.state.isComplete && <hr />}
         <div className="checkoutMain">
           <div className="checkoutInfoBox">
             {!this.state.isComplete && (
