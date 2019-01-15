@@ -13,3 +13,6 @@ module.exports = router;
 //     next(err);
 //   }
 // });
+
+// /api/users/:userId/orders <-- order history
+// /api/users/:userId/cart

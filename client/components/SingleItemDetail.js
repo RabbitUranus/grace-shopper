@@ -13,6 +13,7 @@ export class SingleItemDetail extends Component {
   }
 
   componentDidMount = () => {
+    //CG: Out of control component!
     this.setState({product: this.props.fetchItem(this.id)});
   };
 
@@ -20,7 +21,7 @@ export class SingleItemDetail extends Component {
     this.props.fetchItem(this.id);
   }
   addCart() {
-    this.props.fetchProduct(this.id);
+    this.props.fetchProduct(this.id); //CG: addProductToCart
   }
 
   render() {
@@ -28,8 +29,10 @@ export class SingleItemDetail extends Component {
     return (
       <div className="detailedImage">
         <h2>{name}</h2>
-        <img src={`../${image}`} />
+        {/* CG: Note that the ../ means your are statically */}
+        <img src={`/${image}`} />
         <h4>${price / 100}</h4>
+        {/* CG: You may want to think about some number formatting utility. */}
         <p>{description}</p>
 
         <button type="submit" onClick={this.addCart}>

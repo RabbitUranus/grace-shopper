@@ -14,8 +14,15 @@ export const submitOrder = () => ({
 });
 
 //THUNK CREATOR
+//CG: This is actually addToCart
 export const fetchProduct = id => async dispatch => {
   const {data} = await axios.get(`/api/products/${id}`);
+  /*
+    CG: This block of code is extremely significant b/c
+    This is where you will decide how to manage adding to cart.
+    If logged in user hit server
+    if not go to local storage / update statre in store
+  */
   const action = addProduct(data);
   dispatch(action);
 };

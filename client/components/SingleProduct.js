@@ -9,7 +9,9 @@ export class SingleProduct extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
+    // CG: this should be addProductToCart()
     this.props.fetchProduct(this.props.product.id);
+    //CG: No console.logs should make it to master.
     // console.log('cart contains:', this.props.cart);
   }
 

@@ -15,7 +15,7 @@ const Item = db.define('item', {
     allowNull: false
   },
   description: Sequelize.TEXT,
-  image: {
+  image: { //CG: imageURL
     type: Sequelize.STRING,
     allowNull: false,
     unique: true,

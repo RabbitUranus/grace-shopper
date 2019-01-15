@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 // import watch from './watch';
 
 export const MainPage = () => {
-  console.log('here!');
+  console.log('here!'); //CG: No console.logs
   return (
     <div className="containerMain">
       {/* <nav> */}

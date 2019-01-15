@@ -11,6 +11,7 @@ const router = require('express').Router();
 const {Order} = require('../db/models');
 module.exports = router;
 
+// TODO #ISSUENUMBER - To add auth middleware.
 // const isAuthorized = (req, res, next) => {
 //   if (req.user && req.user.isAdmin === true) {
 //     next(req, res, next);
@@ -19,8 +20,11 @@ module.exports = router;
 //   }
 // };
 
+// app.use(isAuthorized); 
+
 // GET api/orders/
 router.get('/', async (req, res, next) => {
+  //CG: This will throw a 500 for a non-logged in user.
   if (req.user.isAdmin) {
     try {
       const orders = await Order.findAll();
@@ -37,8 +41,9 @@ router.get('/', async (req, res, next) => {
 //POST api/orders
 router.post('/', async (req, res, next) => {
   try {
-    let order = req.body;
+    let order = req.body; //CG: This line of code telsl me that you are taking the users word for it.
 
+      //CG: Validate the information along side of the pricing.
     const charge = await stripe.charges.create({
       amount: order.amount,
       currency: 'usd',

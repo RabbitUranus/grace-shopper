@@ -13,6 +13,16 @@ const Order = require('./order');
  * for example, we can say: const {User} = require('../db/models')
  * instead of: const User = require('../db/models/user')
  */
+
+ /*
+      Order                         Products
+      isCart=true Order_Products
+    Order.belongsToMany(Product, {through: {Order_Products}});
+    Product.belongsToMany(Order, {through: {Order_Products}});  
+    order.getProducts() ?? items in that cart.
+    order.addItem()
+ */
+
 module.exports = {
   User,
   Item,

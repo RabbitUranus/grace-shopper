@@ -8,13 +8,14 @@ const Order = db.define('order', {
     type: Sequelize.STRING,
     default: 'No Stripe ID'
   },
-  amount: {
+  amount: { //CG: amount is vague.
     type: Sequelize.INTEGER,
     allowNull: false,
     validate: {
       min: 1
     }
   },
+  //CG: This is a cue to me that I want a many-to-many through table.
   items: {
     type: Sequelize.ARRAY(Sequelize.INTEGER),
     allowNull: false
