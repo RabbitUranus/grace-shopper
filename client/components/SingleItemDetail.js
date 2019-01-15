@@ -16,6 +16,7 @@ export class SingleItemDetail extends Component {
   }
   addCart() {
     this.props.addToCart(this.id, this.props.user.id);
+    alert('Item successfully added to Cart');
   }
 
   render() {
