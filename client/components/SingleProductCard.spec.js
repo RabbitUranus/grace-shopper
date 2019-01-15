@@ -5,7 +5,6 @@ import React from 'react';
 import enzyme, {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import {SingleProductCard} from './SingleProductCard';
-import sinon from 'sinon';
 
 const adapter = new Adapter();
 enzyme.configure({adapter});
@@ -30,14 +29,7 @@ describe('SingleProduct', () => {
     expect(singleProduct.find('ul')).to.have.lengthOf(1);
   });
 
-  it('has at least one "Link" component', () => {
+  it('has two "Link" components', () => {
     expect(singleProduct.find('Link')).to.have.lengthOf(2);
   });
-
-  // it('simulates click events', () => {
-  //   const onClick = sinon.spy();
-  //   const wrapper = shallow(<SingleProduct onClick={onClick} />);
-  //   wrapper.find('button').simulate('click');
-  //   expect(onClick).to.have.property('callCount', 1);
-  // });
 });
