@@ -45,10 +45,10 @@ export const sendOrder = ({orders, user}) => async dispatch => {
   dispatch(action);
 };
 
-export const loadOrder = ({user}) => async dispatch => {
-  const userCart = await axios.get(`/api/orders/${user.id}`);
-  console.log('loadorder', userCart);
-  const action = loadCart(userCart);
+export const loadOrder = user => async dispatch => {
+  const {data} = await axios.get(`/api/orders/${user.id}`);
+  console.log('user cart is', data);
+  const action = loadCart(data);
   dispatch(action);
 };
 
@@ -66,6 +66,7 @@ export default function cart(state = defaultCart, action) {
       return newState;
     case LOAD_CART:
       newState.cart = action.cart;
+      return newState;
     default:
       return state;
   }

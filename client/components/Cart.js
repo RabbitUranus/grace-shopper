@@ -1,12 +1,14 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {displayPrice} from '../utils/utilities';
+import {loadOrder} from '../reducers/cart';
 
 export class Cart extends React.Component {
   constructor(props) {
     super(props);
     this.homeRedirect = this.homeRedirect.bind(this);
     this.checkoutRedirect = this.checkoutRedirect.bind(this);
+    this.userLoaded = false;
   }
   homeRedirect() {
     let path = `products`;
@@ -16,9 +18,15 @@ export class Cart extends React.Component {
     let path = `cart/checkout`;
     this.props.history.push(path);
   }
+  componentDidUpdate() {
+    if (!this.userLoaded) {
+      this.props.loadOrder(this.props.user);
+      this.userLoaded = true;
+    }
+  }
 
   render() {
-    const {cart, checkout} = this.props;
+    const {cart, checkout, user} = this.props;
     const arrayOfPrices = this.props.cart.map(el => {
       return el.price;
     });
@@ -65,4 +73,8 @@ const mapStateToProps = state => ({
   user: state.user
 });
 
-export default connect(mapStateToProps, null)(Cart);
+const mapDispatchToProps = dispatch => ({
+  loadOrder: user => dispatch(loadOrder(user))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);

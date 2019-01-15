@@ -21,12 +21,12 @@ const isAuthorized = (req, res, next) => {
 
 //GET specific order (for cart)
 router.get('/:userId', async (req, res, next) => {
-  if (req.params.userId != 'undefined') {
+  if (req.params.userId !== 'undefined') {
     try {
       const cart = await Order.findOne({
         where: {userId: req.params.userId, isCart: true}
       });
-      res.json(cart);
+      res.json(cart.items);
     } catch (err) {
       next(err);
     }
