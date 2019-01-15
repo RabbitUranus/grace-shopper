@@ -27,7 +27,7 @@ export class SingleProductCard extends Component {
           </Link>
           <li>{displayPrice(price)}</li>
         </ul>
-        <button type="submit" onClick={this.handleClick}>
+        <button type="submit" onClick={this.handleClick} className="addToCart">
           Add to Cart
         </button>
       </div>

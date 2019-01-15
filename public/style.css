@@ -109,3 +109,12 @@ Flex for the main page
   width: 40%;
   height: 40%;
 }
+
+/* AddToCart Button */
+.addToCart {
+  position: relative;
+  right: 0%;
+  left: 7%;
+  border: 2px solid #eac5b3;
+  padding: 1%;
+}
