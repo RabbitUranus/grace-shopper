@@ -37,9 +37,6 @@ export class Checkout extends React.Component {
     });
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     const total = arrayOfPrices.reduce(reducer, 0);
-
-    // const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    // const total = arrayOfPrices.reduce(reducer, 0);
     const isLoggedIn = !!user.id;
 
     return (
@@ -49,18 +46,17 @@ export class Checkout extends React.Component {
             <label>Personal Information:</label>
             <br />
             <label>
-              Full Name:{' '}
+              Full Name:
               <input name="fullName" type="text" value={this.state.user.name} />
-              {/* onChange={this.handleInputChange} */}
             </label>
 
             <label>
-              Email:{' '}
+              Email:
               <input name="email" type="text" value={this.state.user.email} />
             </label>
 
             <label>
-              Address:{' '}
+              Address:
               <input
                 name="adress"
                 type="text"
@@ -126,4 +122,7 @@ const mapDispatchToProps = dispatch => ({
   sendOrder: order => dispatch(sendOrder(order))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Checkout);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Checkout);
