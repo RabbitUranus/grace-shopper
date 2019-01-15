@@ -5,11 +5,6 @@ import {sendOrder} from '../reducers/cart';
 import ThankYou from './ThankYou';
 import {displayPrice} from '../utils/utilities';
 
-const dummyData = {
-  name: 'Able Baker',
-  address: '123 Main Street, Anytown, NY 12345'
-};
-
 export class Checkout extends React.Component {
   constructor(props) {
     super(props);
@@ -41,7 +36,8 @@ export class Checkout extends React.Component {
         <div className="checkoutInfo">
           {!this.state.isComplete && (
             <form>
-              <label>Personal Information:</label>
+              <br />
+              <label className="categoryInfo">Personal Information:</label>
               <br />
               <label>
                 Full Name:
@@ -65,6 +61,9 @@ export class Checkout extends React.Component {
                   value={this.state.user.address}
                 />
               </label>
+              <br />
+              <label className="categoryInfo">Payment Information:</label>
+              <br />
               <label>
                 Credit Card Number:
                 <input name="creditCard" type="number" />
@@ -118,7 +117,11 @@ export class Checkout extends React.Component {
                 ) : (
                   <tr>
                     <th>
-                      <button onClick={this.handleSubmit}>
+                      <button
+                        type="button"
+                        className="btn btn-outline-info"
+                        onClick={this.handleSubmit}
+                      >
                         Place the order with Stripe
                       </button>
                     </th>

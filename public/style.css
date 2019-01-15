@@ -144,3 +144,7 @@ Flex for the main page
   border: 2px solid #eac5b3;
   padding: 1%;
 }
+
+.categoryInfo {
+  font-style: italic;
+}
