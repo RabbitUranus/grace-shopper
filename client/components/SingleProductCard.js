@@ -10,7 +10,7 @@ export class SingleProductCard extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
-    console.log(this.props.user);
+    console.log('singleproductcard handleclick');
     this.props.addToCart(this.props.product.id, this.props.user.id);
   }
 

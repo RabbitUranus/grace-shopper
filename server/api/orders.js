@@ -36,9 +36,18 @@ router.get('/', async (req, res, next) => {
 router.put('/', async (req, res, next) => {
   //expects a userId
   try {
-    const cart = await Order.findOne({
-      where: {userId: req.body.userId, isCart: true}
-    });
+    let cart = {};
+    if (req.body.userId) {
+      cart = await Order.findOne({
+        where: {userId: req.body.userId, isCart: true}
+      });
+    } else {
+      cart = Order.build({
+        userId: req.body.userId,
+        items: req.body.items,
+        isCart: false
+      });
+    }
 
     cart.total = await cart.getTotal();
 
