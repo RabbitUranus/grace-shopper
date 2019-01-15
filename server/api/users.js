@@ -39,15 +39,3 @@ router.post('/:userId/orders', async (req, res, next) => {
   }
   res.json(req.body.itemId);
 });
-
-// GET api/users/
-// router.get('/', async (req, res, next) => {
-//   try {
-//     const users = await User.findAll({
-//       attributes: ['id', 'email']
-//     });
-//     res.json(users);
-//   } catch (err) {
-//     next(err);
-//   }
-// });

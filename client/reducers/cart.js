@@ -15,7 +15,6 @@ export const submitOrder = () => ({
 
 //THUNK CREATOR
 export const addToCart = (id, userId) => async dispatch => {
-  console.log('in addtocart cart.js');
   const {data} = await axios.get(`/api/products/${id}`);
   const reqBody = {
     itemId: id,
@@ -24,7 +23,6 @@ export const addToCart = (id, userId) => async dispatch => {
   await axios.post(`/api/users/${userId}/orders`, reqBody);
 
   const action = addProduct(data);
-  console.log('in addtocart thunk, action is', action);
   dispatch(action);
 };
 
@@ -37,7 +35,6 @@ export const sendOrder = ({orders, user}) => async dispatch => {
     items: arrayOfIds,
     userId: user.id
   };
-  console.log('sendorder');
   await axios.put('/api/orders', reqBody);
   const action = submitOrder();
   dispatch(action);

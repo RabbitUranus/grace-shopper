@@ -79,26 +79,3 @@ router.put('/', async (req, res, next) => {
     next(err);
   }
 });
-
-//POST api/orders
-router.post('/', async (req, res, next) => {
-  try {
-    const order = Order.build({
-      userId: req.body.userId,
-      items: req.body.items,
-      isCart: false
-    });
-    order.total = await order.getTotal();
-
-    const charge = await stripe.charges.create({
-      amount: order.total,
-      currency: 'usd',
-      source: 'tok_visa'
-    });
-    order.chargeId = charge.id;
-    const submittedOrder = await order.save();
-    res.status(201).json(submittedOrder);
-  } catch (err) {
-    next(err);
-  }
-});
