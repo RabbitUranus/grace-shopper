@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 // import watch from './watch';
 
 export const MainPage = () => {
-  console.log('here!');
   return (
     <div className="containerMain">
       {/* <nav> */}

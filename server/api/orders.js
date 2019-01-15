@@ -29,7 +29,6 @@ router.get('/', async (req, res, next) => {
       next(err);
     }
   } else {
-    console.log('in the else');
     next();
   }
 });
