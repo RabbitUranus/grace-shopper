@@ -40,7 +40,7 @@ export class Checkout extends React.Component {
     const isLoggedIn = !!user.id;
 
     return (
-      <div>
+      <div className="checkoutInfo">
         {!this.state.isComplete && (
           <form>
             <label>Personal Information:</label>

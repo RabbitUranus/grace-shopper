@@ -34,6 +34,10 @@ ul {
   list-style-type: none;
 }
 
+label {
+  font-weight: bold;
+}
+
 /*********************************
 Main Navigation
 *********************************/
@@ -120,6 +124,14 @@ Flex for the main page
 }
 
 .addToCartBig {
+  position: relative;
+  right: 0%;
+  border: 2px solid #eac5b3;
+  padding: 1%;
+}
+
+/* checkout component */
+.checkoutInfo {
   position: relative;
   right: 0%;
   border: 2px solid #eac5b3;
