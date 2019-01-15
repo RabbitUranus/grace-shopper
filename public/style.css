@@ -30,15 +30,6 @@ img {
   height: 90%;
 }
 
-.smallImage img {
-  width: 10%;
-  height: 10%;
-}
-
-.detailedImage img {
-  width: 40%;
-  height: 40%;
-}
 /*********************************
 Main Navigation
 *********************************/
@@ -88,4 +79,29 @@ Flex for the main page
   height: 2%;
   width: 100%;
   display: flex;
+}
+
+/* Single Product Card */
+
+.productsGrid {
+  margin: 4%;
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+}
+
+.productsRow {
+  height: 10%;
+  width: 25%;
+  padding: 2%;
+  text-align: center;
+}
+
+.smallImage img {
+  width: 10%;
+  height: 10%;
+}
+.detailedImage img {
+  width: 40%;
+  height: 40%;
 }

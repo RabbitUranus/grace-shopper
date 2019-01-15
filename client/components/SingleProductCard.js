@@ -16,7 +16,7 @@ export class SingleProductCard extends Component {
   render() {
     const {name, imageURL, price, id} = this.props.product;
     return (
-      <div className="smallImage">
+      <div className="productsRow">
         <ul key={id}>
           <li>
             <Link to={`/products/${id}`}>{name}</Link>
@@ -44,4 +44,7 @@ const mapDispatchToProps = dispatch => ({
   addToCart: id => dispatch(addToCart(id))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(SingleProductCard);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SingleProductCard);
