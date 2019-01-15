@@ -17,16 +17,11 @@ export class Checkout extends React.Component {
       isComplete: false,
       user: this.props.user
     };
-    this.loginRedirect = this.loginRedirect.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleSubmit() {
     this.props.sendOrder({orders: this.props.cart, user: this.props.user});
     this.setState({isComplete: !this.state.isComplete});
-  }
-  loginRedirect() {
-    let path = `login`;
-    this.props.history.push(path);
   }
 
   render() {
@@ -115,7 +110,9 @@ export class Checkout extends React.Component {
                       <button onClick={this.handleSubmit}>
                         Checkout as Guest using Stripe
                       </button>
-                      <button onClick={this.loginRedirect}>Log in</button>
+                      <Link to="/login">
+                        <button>Log in</button>
+                      </Link>
                     </th>
                   </tr>
                 ) : (
