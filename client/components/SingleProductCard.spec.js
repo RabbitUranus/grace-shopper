@@ -30,14 +30,7 @@ describe('SingleProduct', () => {
     expect(singleProduct.find('ul')).to.have.lengthOf(1);
   });
 
-  it('has at least one "Link" component', () => {
+  it('has two "Link" components', () => {
     expect(singleProduct.find('Link')).to.have.lengthOf(2);
   });
-
-  // it('simulates click events', () => {
-  //   const onClick = sinon.spy();
-  //   const wrapper = shallow(<SingleProduct onClick={onClick} />);
-  //   wrapper.find('button').simulate('click');
-  //   expect(onClick).to.have.property('callCount', 1);
-  // });
 });
