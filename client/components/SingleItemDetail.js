@@ -39,7 +39,8 @@ export class SingleItemDetail extends Component {
 const mapStateToProps = state => ({
   cart: state.cart,
   products: state.products,
-  item: state.item
+  item: state.item,
+  user: state.user
 });
 
 const mapDispatchToProps = dispatch => ({
