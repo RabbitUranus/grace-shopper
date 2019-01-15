@@ -22,13 +22,15 @@ export class AllProducts extends Component {
     return (
       <div>
         <h1>All Products</h1>
-        {this.props.products.length ? (
-          products.map(product => (
-            <SingleProductCard product={product} key={product.id} />
-          ))
-        ) : (
-          <div />
-        )}
+        <div className="productsGrid">
+          {this.props.products.length ? (
+            products.map(product => (
+              <SingleProductCard product={product} key={product.id} />
+            ))
+          ) : (
+            <div />
+          )}
+        </div>
       </div>
     );
   }

@@ -34,7 +34,7 @@ export class SingleItemDetail extends Component {
         <h4>{displayPrice(price)}</h4>
         <p>{description}</p>
 
-        <button type="submit" onClick={this.addCart}>
+        <button type="submit" onClick={this.addCart} className="addToCartBig">
           Add to Cart
         </button>
       </div>
@@ -53,4 +53,7 @@ const mapDispatchToProps = dispatch => ({
   addToCart: id => dispatch(addToCart(id))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(SingleItemDetail);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SingleItemDetail);

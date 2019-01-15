@@ -1,5 +1,5 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Libre Baskerville', serif;
 }
 
 a {
@@ -30,15 +30,10 @@ img {
   height: 90%;
 }
 
-.smallImage img {
-  width: 10%;
-  height: 10%;
+ul {
+  list-style-type: none;
 }
 
-.detailedImage img {
-  width: 40%;
-  height: 40%;
-}
 /*********************************
 Main Navigation
 *********************************/
@@ -88,4 +83,45 @@ Flex for the main page
   height: 2%;
   width: 100%;
   display: flex;
+}
+
+/* Single Product Card */
+
+.productsGrid {
+  margin: 4%;
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+}
+
+.productsRow {
+  height: 10%;
+  width: 25%;
+  padding: 2%;
+  text-align: center;
+}
+
+.productsRow img {
+  width: 100%;
+  height: 100%;
+}
+.detailedImage img {
+  width: 30%;
+  height: 30%;
+}
+
+/* AddToCart Button */
+.addToCart {
+  position: relative;
+  right: 0%;
+  left: 7%;
+  border: 2px solid #eac5b3;
+  padding: 1%;
+}
+
+.addToCartBig {
+  position: relative;
+  right: 0%;
+  border: 2px solid #eac5b3;
+  padding: 1%;
 }
