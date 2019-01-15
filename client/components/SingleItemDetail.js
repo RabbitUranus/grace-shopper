@@ -15,7 +15,7 @@ export class SingleItemDetail extends Component {
     this.props.fetchItem(this.id);
   }
   addCart() {
-    this.props.addToCart(this.id);
+    this.props.addToCart(this.id, this.props.user.id);
   }
 
   render() {
@@ -43,10 +43,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchItem: id => dispatch(fetchItem(id)),
-  addToCart: id => dispatch(addToCart(id))
+  addToCart: (id, userId) => dispatch(addToCart(id, userId))
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SingleItemDetail);
+export default connect(mapStateToProps, mapDispatchToProps)(SingleItemDetail);

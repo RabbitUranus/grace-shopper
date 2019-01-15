@@ -29,21 +29,49 @@ router.get('/', isAuthorized, async (req, res, next) => {
   }
 });
 
-//POST api/orders
-router.post('/', async (req, res, next) => {
+router.put('/', async (req, res, next) => {
+  //expects a userId
   try {
-    const order = Order.build({userId: req.body.userId, items: req.body.items});
-    order.total = await order.getTotal();
+    let cart = {};
+    if (req.body.userId) {
+      cart = await Order.findOne({
+        where: {userId: req.body.userId, isCart: true}
+      });
+    } else {
+      cart = Order.build({
+        userId: req.body.userId,
+        items: req.body.items,
+        isCart: false
+      });
+    }
 
-    const charge = await stripe.charges.create({
-      amount: order.total,
-      currency: 'usd',
-      source: 'tok_visa'
-    });
-    order.chargeId = charge.id;
-    const submittedOrder = await order.save();
-    res.status(201).json(submittedOrder);
+    cart.total = await cart.getTotal();
+
+    try {
+      const charge = await stripe.charges.create({
+        amount: cart.total,
+        currency: 'usd',
+        source: 'tok_visa'
+      });
+      cart.chargeId = charge.id;
+      cart.isCart = false;
+      //this will turn it into a fulfilled order
+
+      await cart.save();
+      res.status(202).json(cart);
+    } catch (err) {
+      console.error(err);
+      res
+        .status(500)
+        .send(
+          'Sorry, something has gone wrong with processing your credit card'
+        );
+    }
   } catch (err) {
+    console.error(err);
+    res
+      .status(500)
+      .send('Sorry, something has gone wrong with processing your order');
     next(err);
   }
 });

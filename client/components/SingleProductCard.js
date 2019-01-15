@@ -10,13 +10,13 @@ export class SingleProductCard extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
-    this.props.addToCart(this.props.product.id);
+    this.props.addToCart(this.props.product.id, this.props.user.id);
   }
 
   render() {
     const {name, imageURL, price, id} = this.props.product;
     return (
-      <div className="productsRow">
+      <div className="smallImage">
         <ul key={id}>
           <li>
             <Link to={`/products/${id}`}>{name}</Link>
@@ -27,7 +27,7 @@ export class SingleProductCard extends Component {
           </Link>
           <li>{displayPrice(price)}</li>
         </ul>
-        <button type="submit" onClick={this.handleClick} className="addToCart">
+        <button type="submit" onClick={this.handleClick}>
           Add to Cart
         </button>
       </div>
@@ -37,14 +37,12 @@ export class SingleProductCard extends Component {
 
 const mapStateToProps = state => ({
   cart: state.cart,
-  products: state.products
+  products: state.products,
+  user: state.user
 });
 
 const mapDispatchToProps = dispatch => ({
-  addToCart: id => dispatch(addToCart(id))
+  addToCart: (id, userId) => dispatch(addToCart(id, userId))
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(SingleProductCard);
+export default connect(mapStateToProps, mapDispatchToProps)(SingleProductCard);
