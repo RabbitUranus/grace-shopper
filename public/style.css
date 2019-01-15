@@ -38,6 +38,9 @@ label {
   font-weight: bold;
 }
 
+input {
+  width: 100%;
+}
 /*********************************
 Main Navigation
 *********************************/
@@ -132,6 +135,10 @@ Flex for the main page
 
 /* checkout component */
 .checkoutInfo {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  width: 30%;
   position: relative;
   right: 0%;
   border: 2px solid #eac5b3;

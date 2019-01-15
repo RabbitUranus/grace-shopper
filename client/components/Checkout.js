@@ -40,74 +40,98 @@ export class Checkout extends React.Component {
     const isLoggedIn = !!user.id;
 
     return (
-      <div className="checkoutInfo">
-        {!this.state.isComplete && (
-          <form>
-            <label>Personal Information:</label>
-            <br />
-            <label>
-              Full Name:
-              <input name="fullName" type="text" value={this.state.user.name} />
-            </label>
+      <div>
+        <div className="checkoutInfo" />
 
-            <label>
-              Email:
-              <input name="email" type="text" value={this.state.user.email} />
-            </label>
+        <div className="checkoutInfo">
+          {!this.state.isComplete && (
+            <form>
+              <label>Personal Information:</label>
+              <br />
+              <label>
+                Full Name:
+                <input
+                  name="fullName"
+                  type="text"
+                  value={this.state.user.name}
+                />
+              </label>
 
-            <label>
-              Address:
-              <input
-                name="adress"
-                type="text"
-                value={this.state.user.address}
-              />
-            </label>
-          </form>
-        )}
+              <label>
+                Email:
+                <input name="email" type="text" value={this.state.user.email} />
+              </label>
 
-        {!this.state.isComplete && (
-          <table>
-            <thead>
-              <tr>
-                <th>Your order</th>
-                <th>Price</th>
-                <th>Quantity</th>
-              </tr>
-              {cart &&
-                cart.map(product => (
-                  <tr key={product.id}>
-                    <td>{product.name}</td>
-                    <td>{displayPrice(product.price)}</td>
-                    <td>1</td>
+              <label>
+                Address:
+                <input
+                  name="adress"
+                  type="text"
+                  value={this.state.user.address}
+                />
+              </label>
+              <label>
+                Credit Card Number:
+                <input name="creditCard" type="number" />
+              </label>
+              <label>
+                Card Validation Code (3 or 4 digit number):
+                <input name="code" type="number" />
+              </label>
+              <label>
+                Ex. Month:
+                <input name="exMonth" type="number" />
+              </label>
+              <label>
+                Ex. Year:
+                <input name="exYear" type="number" />
+              </label>
+            </form>
+          )}
+
+          {!this.state.isComplete && (
+            <table>
+              <thead>
+                <tr>
+                  <th>Your order</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                </tr>
+                {cart &&
+                  cart.map(product => (
+                    <tr key={product.id}>
+                      <td>{product.name}</td>
+                      <td>{displayPrice(product.price)}</td>
+                      <td>1</td>
+                    </tr>
+                  ))}
+                <tr>
+                  <th>Total: {displayPrice(total)}</th>
+                </tr>
+
+                {!isLoggedIn ? (
+                  <tr>
+                    <th>
+                      <button onClick={this.handleSubmit}>
+                        Checkout as Guest using Stripe
+                      </button>
+                      <button onClick={this.loginRedirect}>Log in</button>
+                    </th>
                   </tr>
-                ))}
-              <tr>
-                <th>Total: {displayPrice(total)}</th>
-              </tr>
-
-              {!isLoggedIn ? (
-                <tr>
-                  <th>
-                    <button onClick={this.handleSubmit}>
-                      Checkout as Guest using Stripe
-                    </button>
-                    <button onClick={this.loginRedirect}>Log in</button>
-                  </th>
-                </tr>
-              ) : (
-                <tr>
-                  <th>
-                    <button onClick={this.handleSubmit}>
-                      Complete with Stripe
-                    </button>
-                  </th>
-                </tr>
-              )}
-            </thead>
-          </table>
-        )}
-        {this.state.isComplete && <ThankYou />}
+                ) : (
+                  <tr>
+                    <th>
+                      <button onClick={this.handleSubmit}>
+                        Place the order with Stripe
+                      </button>
+                    </th>
+                  </tr>
+                )}
+              </thead>
+            </table>
+          )}
+          {this.state.isComplete && <ThankYou />}
+        </div>
       </div>
     );
   }
