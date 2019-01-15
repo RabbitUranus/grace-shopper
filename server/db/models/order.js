@@ -18,7 +18,7 @@ const Order = db.define('order', {
     type: Sequelize.INTEGER,
     allowNull: false,
     validate: {
-      min: 1
+      min: 0
     }
   },
   items: {
