@@ -5,10 +5,8 @@ import {Link} from 'react-router-dom';
 export const MainPage = () => {
   return (
     <div className="containerMain">
-      {/* <nav> */}
-
       <div className="categoryRow">
-        <Link to="/watches">Watches</Link>
+        <Link to="/products/?category=watch">Watches</Link>
         <div className="mainImage">
           <img src="http://cdn.shopify.com/s/files/1/0377/2037/products/Rodeo_Side_1623d486-b650-47f6-befe-55e40d63edb7_1024x1024.progressive.jpg?v=1510688398" />
         </div>
@@ -26,7 +24,6 @@ export const MainPage = () => {
         <Link to="/products">All products</Link>
         <img src="http://media.cleo.com.sg/2017/09/rose-gold-accessories-50.jpg" />
       </div>
-      {/* </nav> */}
     </div>
   );
 };
