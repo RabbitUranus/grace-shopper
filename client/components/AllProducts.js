@@ -1,12 +1,20 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {fetchProducts} from '../reducers/products';
-
 import SingleProductCard from './SingleProductCard';
+import queryString from 'query-string';
 
 export class AllProducts extends Component {
   componentDidMount() {
-    this.props.fetchProducts();
+    let query;
+    const values = queryString.parse(this.props.location.search);
+    const category = values.category || '';
+    if (!category) {
+      query = '';
+    } else {
+      query = `?category=${category}`;
+    }
+    this.props.fetchProducts(query);
   }
 
   render() {
@@ -33,7 +41,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchProducts: () => dispatch(fetchProducts())
+  fetchProducts: query => dispatch(fetchProducts(query))
 });
 
 export default connect(
