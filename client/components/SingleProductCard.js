@@ -17,14 +17,13 @@ export class SingleProductCard extends Component {
   render() {
     const {name, imageURL, price, id} = this.props.product;
     return (
-      <div className="smallImage">
+      <div className="productsRow">
         <ul key={id}>
           <li>
             <Link to={`/products/${id}`}>{name}</Link>
           </li>
           <Link to={`/products/${id}`}>
-            {' '}
-            <img src={imageURL} />{' '}
+            <img src={imageURL} />
           </Link>
           <li>{displayPrice(price)}</li>
         </ul>
