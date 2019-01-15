@@ -134,17 +134,18 @@ Flex for the main page
 }
 
 /* checkout component */
-.checkoutInfo {
+.checkoutInfoBox {
   display: flex;
   /* flex-direction: row; */
   flex-wrap: wrap;
-  width: 30%;
+  width: 40%;
   position: relative;
   right: 0%;
   border: 2px solid #eac5b3;
   padding: 1%;
 }
 
+/* label */
 .categoryInfo {
   font-style: italic;
 }

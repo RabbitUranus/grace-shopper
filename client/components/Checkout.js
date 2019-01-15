@@ -31,9 +31,97 @@ export class Checkout extends React.Component {
 
     return (
       <div>
-        <div className="checkoutInfo" />
+        <div className="checkoutInfoBox">
+          {!this.state.isComplete && (
+            <form>
+              <br />
+              <label className="categoryInfo">Billing Address:</label>
+              <br />
+              <label>
+                Full Name*:
+                <input
+                  name="fullName"
+                  type="text"
+                  value={this.state.user.name}
+                />
+              </label>
 
-        <div className="checkoutInfo">
+              <label>
+                Shipping Address 1*:
+                <input
+                  name="address"
+                  type="text"
+                  value={this.state.user.address}
+                />
+              </label>
+
+              <label>
+                Shipping Address 2:
+                <input name="address" type="text" />
+              </label>
+              <label>
+                City*:
+                <input name="city" type="text" />
+              </label>
+              <label>
+                State*:
+                <input name="address" type="text" />
+              </label>
+              <label>
+                Zip Code*:
+                <input name="address" type="number" />
+              </label>
+              <br />
+            </form>
+          )}
+        </div>
+
+        <div className="checkoutInfoBox">
+          {!this.state.isComplete && (
+            <form>
+              <br />
+              <label className="categoryInfo">Shipping Address:</label>
+              <br />
+              <label>
+                Full Name*:
+                <input
+                  name="fullName"
+                  type="text"
+                  value={this.state.user.name}
+                />
+              </label>
+
+              <label>
+                Shipping Address 1*:
+                <input
+                  name="address"
+                  type="text"
+                  value={this.state.user.address}
+                />
+              </label>
+
+              <label>
+                Shipping Address 2:
+                <input name="address" type="text" />
+              </label>
+              <label>
+                City*:
+                <input name="city" type="text" />
+              </label>
+              <label>
+                State*:
+                <input name="address" type="text" />
+              </label>
+              <label>
+                Zip Code*:
+                <input name="address" type="number" />
+              </label>
+              <br />
+            </form>
+          )}
+        </div>
+
+        <div className="checkoutInfoBox">
           {!this.state.isComplete && (
             <form>
               <br />
@@ -82,7 +170,9 @@ export class Checkout extends React.Component {
               </label>
             </form>
           )}
+        </div>
 
+        <div className="checkoutInfoBox">
           {!this.state.isComplete && (
             <table>
               <thead>
@@ -136,8 +226,8 @@ export class Checkout extends React.Component {
               </thead>
             </table>
           )}
-          {this.state.isComplete && <ThankYou />}
         </div>
+        {this.state.isComplete && <ThankYou />}
       </div>
     );
   }
