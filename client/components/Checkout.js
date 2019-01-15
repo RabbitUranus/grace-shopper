@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {sendOrder} from '../reducers/cart';
 import ThankYou from './ThankYou';
 import {displayPrice} from '../utils/utilities';
+import Cart from './Cart';
 
 const dummyData = {
   name: 'Able Baker',
@@ -73,23 +74,7 @@ export class Checkout extends React.Component {
         {!this.state.isComplete && (
           <table>
             <thead>
-              <tr>
-                <th>Your order</th>
-                <th>Price</th>
-                <th>Quantity</th>
-              </tr>
-              {cart &&
-                cart.map(product => (
-                  <tr key={product.id}>
-                    <td>{product.name}</td>
-                    <td>{displayPrice(product.price)}</td>
-                    <td>1</td>
-                  </tr>
-                ))}
-              <tr>
-                <th>Total: {displayPrice(total)}</th>
-              </tr>
-
+              <Cart checkout={true} />
               {!isLoggedIn ? (
                 <tr>
                   <th>

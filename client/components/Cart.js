@@ -18,7 +18,7 @@ export class Cart extends React.Component {
   }
 
   render() {
-    const {cart} = this.props;
+    const {cart, checkout} = this.props;
     const arrayOfPrices = this.props.cart.map(el => {
       return el.price;
     });
@@ -44,14 +44,16 @@ export class Cart extends React.Component {
           <tr>
             <th>Total: {displayPrice(total)}</th>
           </tr>
-          <tr>
-            <th>
-              <button onClick={this.homeRedirect}>Continue shopping</button>
-            </th>
-            <th>
-              <button onClick={this.checkoutRedirect}>Checkout</button>
-            </th>
-          </tr>
+          {!checkout && (
+            <tr>
+              <th>
+                <button onClick={this.homeRedirect}>Continue shopping</button>
+              </th>
+              <th>
+                <button onClick={this.checkoutRedirect}>Checkout</button>
+              </th>
+            </tr>
+          )}
         </thead>
       </table>
     );
@@ -59,7 +61,8 @@ export class Cart extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  cart: state.cart.cart
+  cart: state.cart.cart,
+  user: state.user
 });
 
 export default connect(mapStateToProps, null)(Cart);
