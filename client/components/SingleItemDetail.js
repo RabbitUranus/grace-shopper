@@ -16,7 +16,6 @@ export class SingleItemDetail extends Component {
   }
   addCart() {
     this.props.addToCart(this.id, this.props.user.id);
-    alert('Item successfully added to Cart');
   }
 
   render() {
@@ -48,4 +47,7 @@ const mapDispatchToProps = dispatch => ({
   addToCart: (id, userId) => dispatch(addToCart(id, userId))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(SingleItemDetail);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(SingleItemDetail);

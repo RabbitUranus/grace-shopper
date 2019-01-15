@@ -11,7 +11,6 @@ export class SingleProductCard extends Component {
   }
   handleClick() {
     this.props.addToCart(this.props.product.id, this.props.user.id);
-    alert('Item successfully added to Cart');
   }
 
   render() {
