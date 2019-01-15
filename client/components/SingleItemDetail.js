@@ -1,24 +1,17 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {fetchItem} from '../reducers/item';
-import {fetchProduct} from '../reducers/cart';
 import {displayPrice} from '../utils/utilities';
 import {addToCart} from '../reducers/cart';
 
 export class SingleItemDetail extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
     this.id = +this.props.match.params.id;
-    this.handleClick = this.handleClick.bind(this);
     this.addCart = this.addCart.bind(this);
   }
 
-  componentDidMount = () => {
-    this.setState({product: this.props.fetchItem(this.id)});
-  };
-
-  handleClick() {
+  componentDidMount() {
     this.props.fetchItem(this.id);
   }
   addCart() {
