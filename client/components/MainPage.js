@@ -12,12 +12,12 @@ export const MainPage = () => {
         </div>
       </div>
       <div className="categoryRow">
-        <Link to="/rings">Rings</Link>
+        <Link to="/products/?category=ring">Rings</Link>
         <img src="http://image.brilliantearth.com/media/shape_images/07d7654fad40af0cfede43213c18c7bc_31879ec36695c01698749d8372166ff4_0_.jpg" />
       </div>
 
       <div className="categoryRow">
-        <Link to="/earrings">Earrings</Link>
+        <Link to="/products/?category=earrings">Earrings</Link>
         <img src="http://www.kendrascott.com/on/demandware.static/-/Sites-kendrascott/default/dw06196130/jewelry/signature/elle-earrings/842177017388_00_default_lg.jpg" />
       </div>
       <div className="categoryRow">

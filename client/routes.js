@@ -8,14 +8,15 @@ import {
   UserHome,
   Navbar,
   AllProducts,
-  ThankYou
+  ThankYou,
+  Category
 } from './components';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import SingleItemDetail from './components/SingleItemDetail';
 import {me} from './store';
 import {MainPage} from './components/MainPage';
-import Category from './components/Category';
+// import Category from './components/Category';
 
 /**
  * COMPONENT
@@ -39,11 +40,11 @@ class Routes extends Component {
           <Route exact path="/signup" component={Signup} />
           <Route path="/products/:id" component={SingleItemDetail} />
 
-          <Route exact path="/products" component={AllProducts} />
+          <Route path="/products" component={AllProducts} />
           <Route
             exact
-            path="/products/watches"
-            component={() => <Category query="?category=watch" />}
+            path="/products/?category=:category"
+            component={AllProducts}
           />
 
           <Route exact path="/cart" component={Cart} />
