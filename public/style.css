@@ -106,8 +106,8 @@ Flex for the main page
   height: 100%;
 }
 .detailedImage img {
-  width: 40%;
-  height: 40%;
+  width: 30%;
+  height: 30%;
 }
 
 /* AddToCart Button */
@@ -115,6 +115,13 @@ Flex for the main page
   position: relative;
   right: 0%;
   left: 7%;
+  border: 2px solid #eac5b3;
+  padding: 1%;
+}
+
+.addToCartBig {
+  position: relative;
+  right: 0%;
   border: 2px solid #eac5b3;
   padding: 1%;
 }
