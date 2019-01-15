@@ -164,3 +164,13 @@ hr {
   size: 1px;
   width: 10%;
 }
+
+/* Table styling */
+td {
+  text-align: center;
+}
+
+/*ThankYou*/
+.thankYouMessage {
+  text-align: center;
+}
