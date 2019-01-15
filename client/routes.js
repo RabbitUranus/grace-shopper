@@ -8,15 +8,13 @@ import {
   UserHome,
   Navbar,
   AllProducts,
-  ThankYou,
-  Category
+  ThankYou
 } from './components';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import SingleItemDetail from './components/SingleItemDetail';
 import {me} from './store';
 import {MainPage} from './components/MainPage';
-// import Category from './components/Category';
 
 /**
  * COMPONENT
@@ -31,7 +29,6 @@ class Routes extends Component {
 
     return (
       <div>
-        {/* <Route path="/api/*" render={() => <Redirect to="/" />} /> */}
         <Route path="/" component={Navbar} />
         <Route exact path="/" component={MainPage} />
         <Switch>
@@ -40,13 +37,8 @@ class Routes extends Component {
           <Route exact path="/signup" component={Signup} />
           <Route path="/products/:id" component={SingleItemDetail} />
 
-          <Route path="/products" component={AllProducts} />
-          <Route
-            exact
-            path="/products/?category=:category"
-            component={AllProducts}
-          />
-
+          <Route exact path="/products" component={AllProducts} />
+          <Route path="/products/?category=:category" component={AllProducts} />
           <Route exact path="/cart" component={Cart} />
           <Route exact path="/cart/checkout" component={Checkout} />
           <Route exact path="/cart/checkout/thankyou" component={ThankYou} />
